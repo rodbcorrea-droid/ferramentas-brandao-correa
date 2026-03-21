@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brandão Correa · Verificador ZapSign</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+ :root {
+ --blue: #2c4fa3;
+ --blue-dark: #1e3578;
+ --blue-lt: #e8edf8;
+ --blue-mid: #4a6bc8;
+ --bg: #eef1f9;
+ --white: #ffffff;
+ --dark: #1a1f2e;
+ --mid: #4a5068;
+ --muted: #8a90a8;
+ --border: #d0d8ee;
+ --ok: #1a6b35;
+ --ok-bg: #e6f4ec;
+ --ok-bd: #a8d5b8;
+ --warn: #7a5500;
+ --warn-bg: #fff8e1;
+ --warn-bd: #f0cc70;
+ --fail: #8a1515;
+ --fail-bg: #fce8e8;
+ --fail-bd: #e8a0a0;
+ --info: #1a3a80;
+ --info-bg: #e8edf8;
+ --info-bd: #a0b4e0;
+ }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ body { background: var(--bg); color: var(--dark); font-family: 'Lato', sans-serif; min-height: 100vh; }
+
+ header {
+ background: var(--white);
+ border-bottom: 1px solid var(--border);
+ box-shadow: 0 2px 12px rgba(44,79,163,0.08);
+ padding: 0 40px; height: 74px;
+ display: flex; align-items: center; justify-content: space-between;
+ }
+ .logo-wrap { display: flex; align-items: center; text-decoration: none; }
+ .logo-wrap img { height: 52px; object-fit: contain; }
+ .header-pill {
+ font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+ text-transform: uppercase; color: var(--blue);
+ background: var(--blue-lt); border: 1px solid var(--border);
+ padding: 6px 16px; border-radius: 100px;
+ }
+
+ .hero {
+ background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+ padding: 44px 32px 40px; text-align: center; color: var(--white);
+ position: relative; overflow: hidden;
+ }
+ .hero::after {
+ content: '⚖'; position: absolute; right: 80px; top: 50%;
+ transform: translateY(-50%); font-size: 130px; opacity: 0.05;
+ pointer-events: none; line-height: 1;
+ }
+ .hero-badge {
+ display: inline-flex; align-items: center; gap: 6px;
+ background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22);
+ border-radius: 100px; padding: 5px 16px;
+ font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+ text-transform: uppercase; margin-bottom: 16px;
+ }
+ .hero h1 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+ .hero h1 span { color: #a8c0f0; }
+ .hero p { font-size: 0.88rem; opacity: 0.78; font-weight: 300; }
+
+ .container { max-width: 820px; margin: 0 auto; padding: 40px 24px 80px; }
+
+ .upload-zone {
+ background: var(--white); border: 2px dashed var(--border); border-radius: 16px;
+ padding: 64px 32px; text-align: center; cursor: pointer; transition: all 0.2s;
+ position: relative; overflow: hidden; box-shadow: 0 4px 24px rgba(44,79,163,0.07);
+ }
+ .upload-zone:hover, .upload-zone.drag-over { border-color: var(--blue); background: var(--blue-lt); }
+ .upload-zone input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+ .upload-icon {
+ width: 68px; height: 68px; background: var(--blue-lt); border: 2px solid var(--border);
+ border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 22px;
+ }
+ .upload-icon svg { width: 30px; height: 30px; color: var(--blue); }
+ .upload-zone h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--blue-dark); margin-bottom: 8px; }
+ .upload-zone p { font-size: 0.82rem; color: var(--muted); }
+
+ .processing {
+ display: none; flex-direction: column; align-items: center; gap: 18px;
+ padding: 60px 32px; background: var(--white); border-radius: 16px;
+ border: 1px solid var(--border); box-shadow: 0 4px 24px rgba(44,79,163,0.07); text-align: center;
+ }
+ .spinner { width: 46px; height: 46px; border: 3px solid var(--border); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.8s linear infinite; }
+ @keyframes spin { to { transform: rotate(360deg); } }
+ .processing h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--blue-dark); }
+ .processing p { font-size: 0.8rem; color: var(--muted); }
+
+ .results { display: none; }
+ .results-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+ .results-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--blue-dark); }
+ .score-badge { display: inline-flex; align-items: center; gap: 6px; padding: 7px 18px; border-radius: 100px; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+ .score-badge.ok { background: var(--ok-bg); color: var(--ok); border: 1px solid var(--ok-bd); }
+ .score-badge.warn { background: var(--warn-bg); color: var(--warn); border: 1px solid var(--warn-bd); }
+ .score-badge.fail { background: var(--fail-bg); color: var(--fail); border: 1px solid var(--fail-bd); }
+
+ .section-label {
+ font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+ letter-spacing: 0.14em; color: var(--blue);
+ margin: 28px 0 10px; display: flex; align-items: center; gap: 8px;
+ }
+ .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+ .check-card {
+ background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+ padding: 18px 20px; margin-bottom: 10px;
+ display: grid; grid-template-columns: 36px 1fr auto;
+ gap: 14px; align-items: start;
+ box-shadow: 0 2px 10px rgba(44,79,163,0.05); transition: box-shadow 0.2s;
+ }
+ .check-card:hover { box-shadow: 0 4px 18px rgba(44,79,163,0.1); }
+ .check-card.status-ok { border-left: 4px solid var(--ok); }
+ .check-card.status-warn { border-left: 4px solid #d4a020; }
+ .check-card.status-fail { border-left: 4px solid #c43030; }
+ .check-card.status-info { border-left: 4px solid var(--blue-mid); }
+
+ .check-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+ .check-icon.ok { background: var(--ok-bg); color: var(--ok); }
+ .check-icon.warn { background: var(--warn-bg); color: #a07000; }
+ .check-icon.fail { background: var(--fail-bg); color: #c43030; }
+ .check-icon.info { background: var(--info-bg); color: var(--blue); }
+ .check-icon svg { width: 16px; height: 16px; }
+
+ .check-body { min-width: 0; }
+ .check-name { font-size: 0.9rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+ .check-detail { font-size: 0.78rem; color: var(--mid); line-height: 1.7; }
+ .check-detail .val { display: inline-block; background: var(--blue-lt); color: var(--blue-dark); padding: 2px 9px; border-radius: 5px; font-size: 0.72rem; font-weight: 700; margin: 2px 2px; word-break: break-all; }
+ .check-detail .match { color: var(--ok); font-weight: 700; }
+ .check-detail .mismatch{ color: #c43030; font-weight: 700; }
+
+ .check-status { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 11px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+ .check-status.ok { background: var(--ok-bg); color: var(--ok); border: 1px solid var(--ok-bd); }
+ .check-status.warn { background: var(--warn-bg); color: #a07000; border: 1px solid var(--warn-bd); }
+ .check-status.fail { background: var(--fail-bg); color: #c43030; border: 1px solid var(--fail-bd); }
+ .check-status.info { background: var(--info-bg); color: var(--blue); border: 1px solid var(--info-bd); }
+
+ .ip-note { display: none; background: var(--info-bg); border: 1px solid var(--info-bd); border-radius: 10px; padding: 12px 16px; font-size: 0.76rem; color: var(--info); line-height: 1.6; margin-bottom: 16px; }
+
+ .raw-toggle { display: flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid var(--border); color: var(--mid); font-family: 'Lato', sans-serif; font-size: 0.75rem; font-weight: 700; padding: 9px 16px; border-radius: 8px; cursor: pointer; margin-top: 24px; transition: all 0.2s; }
+ .raw-toggle:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-lt); }
+ .raw-box { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px; font-family: 'Courier New', monospace; font-size: 0.68rem; line-height: 1.8; color: var(--muted); white-space: pre-wrap; max-height: 360px; overflow-y: auto; margin-top: 10px; }
+
+ .reset-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--blue); border: none; color: var(--white); font-family: 'Lato', sans-serif; font-size: 0.84rem; font-weight: 700; padding: 13px 30px; border-radius: 10px; cursor: pointer; margin-top: 28px; transition: background 0.2s; }
+ .reset-btn:hover { background: var(--blue-dark); }
+
+ footer { background: var(--dark); color: #7a8090; text-align: center; padding: 30px 24px; font-size: 0.75rem; line-height: 2; }
+ footer a { color: #a0b0cc; text-decoration: none; }
+ footer strong { color: #c8d0e0; }
+
+ ::-webkit-scrollbar { width: 6px; }
+ ::-webkit-scrollbar-track { background: var(--blue-lt); }
+ ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<header>
+ <a class="logo-wrap" href="https://www.brandaocorrea.com.br" target="_blank">
+ <img src="https://cdn.bitrix24.com.br/b6630127/landing/a4f/a4f739cdf849cbaf607a143fb27b93b2/logo_brandao_1x.png" alt="Brandão Correa Assessoria Jurídica">
+ </a>
+ <span class="header-pill">🔒 Verificador ZapSign</span>
+</header>
+
+<div class="hero">
+ <div class="hero-badge">⚖️ Segurança Documental</div>
+ <h1>Verificador de <span>Autenticidade</span> ZapSign</h1>
+ <p>Analise e-mail, telefone, IP e geolocalização do contrato assinado</p>
+</div>
+
+<div class="container">
+
+ <div class="upload-zone" id="uploadZone">
+ <input type="file" id="fileInput" accept=".pdf">
+ <div class="upload-icon">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+ <polyline points="14 2 14 8 20 8"/>
+ <line x1="12" y1="18" x2="12" y2="12"/>
+ <polyline points="9 15 12 12 15 15"/>
+ </svg>
+ </div>
+ <h2>Arraste o contrato ZapSign aqui</h2>
+ <p>ou clique para selecionar o arquivo PDF</p>
+ </div>
+
+ <div class="processing" id="processing">
+ <div class="spinner"></div>
+ <h3>Analisando contrato…</h3>
+ <p id="processingMsg">Extraindo texto do PDF</p>
+ </div>
+
+ <div class="results" id="results">
+ <div class="results-header">
+ <span class="results-title">Resultado da Verificação</span>
+ <span class="score-badge" id="scoreBadge">—</span>
+ </div>
+ <div class="ip-note" id="ipNote">
+ ℹ️ A verificação de IP por geolocalização depende de conexão com a internet. Resultados podem variar em casos de uso de VPN ou proxy.
+ </div>
+ <div id="checksContainer"></div>
+ <button class="raw-toggle" id="rawToggle" onclick="toggleRaw()">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+ Ver texto extraído do PDF
+ </button>
+ <div class="raw-box" id="rawBox"></div>
+ <button class="reset-btn" onclick="resetApp()">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/></svg>
+ Verificar outro contrato
+ </button>
+ </div>
+
+</div>
+
+<footer>
+ <strong>Brandão Correa Assessoria Jurídica</strong><br>
+ 📍 Rua Gago Coutinho 520, Araés — Cuiabá/MT — CEP 78005-730<br>
+ <a href="https://www.brandaocorrea.com.br" target="_blank">www.brandaocorrea.com.br</a>
+ &nbsp;·&nbsp; <a href="tel:06520181253">065 2018-1253</a>
+ &nbsp;·&nbsp; <a href="tel:06530525278">065 3052-5278</a><br><br>
+ © 2026 Brandão Correa Assessoria Jurídica. Todos os direitos reservados.
+</footer>
+
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+const zone = document.getElementById('uploadZone');
+zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+zone.addEventListener('drop', e => { e.preventDefault(); zone.classList.remove('drag-over'); handleFile(e.dataTransfer.files[0]); });
+document.getElementById('fileInput').addEventListener('change', e => handleFile(e.target.files[0]));
+
+function setMsg(m) { document.getElementById('processingMsg').textContent = m; }
+
+async function handleFile(file) {
+ if (!file || file.type !== 'application/pdf') { alert('Por favor, selecione um arquivo PDF válido.'); return; }
+ show('processing');
+ try {
+ setMsg('Lendo PDF…');
+ const text = await extractPDF(file);
+ setMsg('Analisando dados de segurança…');
+ await analyzeContract(text);
+ } catch(e) {
+ alert('Erro ao processar o PDF: ' + e.message);
+ show('upload');
+ }
+}
+
+async function extractPDF(file) {
+ const buf = await file.arrayBuffer();
+ const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+ let full = '';
+ for (let i = 1; i <= pdf.numPages; i++) {
+ const pg = await pdf.getPage(i);
+ const cnt = await pg.getTextContent();
+ full += cnt.items.map(it => it.str).join(' ') + '\n';
+ }
+ return full;
+}
+
+async function analyzeContract(text) {
+ document.getElementById('rawBox').textContent = text;
+ const checks = [];
+ const data = extractData(text);
+ const bodyData = extractBodyData(text);
+ signatoryEmailCheck(data, bodyData, checks);
+ signatoryPhoneCheck(data, bodyData, checks);
+ await ipCityCheck(data, checks);
+ geoLocationCheck(data, checks);
+ renderResults(checks);
+}
+
+function extractValidIPs(text) {
+ const validIPs = [];
+ const labeledIPRegex = /\bIP[:\s]+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b/gi;
+ let m;
+ while ((m = labeledIPRegex.exec(text)) !== null) {
+ const ip = m[1];
+ if (isValidPublicIP(ip)) validIPs.push({ ip, labeled: true, index: m.index });
+ }
+ if (validIPs.length > 0) return validIPs;
+ const sigSection = extractSignatureSection(text);
+ const rawIPRegex = /\b(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\b/g;
+ while ((m = rawIPRegex.exec(sigSection)) !== null) {
+ const ip = m[0];
+ const parts = ip.split('.').map(Number);
+ if (!isValidPublicIP(ip)) continue;
+ if (parts.some(p => p > 255)) continue;
+ if (parts[1] === 0 && parts[2] === 0 && parts[3] === 0) continue;
+ validIPs.push({ ip, labeled: false, index: m.index });
+ }
+ return validIPs;
+}
+
+function isValidPublicIP(ip) {
+ const parts = ip.split('.').map(Number);
+ if (parts.length !== 4) return false;
+ if (parts.some(p => isNaN(p) || p < 0 || p > 255)) return false;
+ if (parts[0] === 10) return false;
+ if (parts[0] === 127) return false;
+ if (parts[0] === 0) return false;
+ if (parts[0] === 172 && parts[1] >= 16 && parts[1] <= 31) return false;
+ if (parts[0] === 192 && parts[1] === 168) return false;
+ if (parts[0] === 169 && parts[1] === 254) return false;
+ if (parts[0] >= 224) return false;
+ if (parts[1] === 0 && parts[2] === 0 && parts[3] === 0) return false;
+ if (parts[0] === 255) return false;
+ return true;
+}
+
+function extractData(text) {
+ const signatureSection = extractSignatureSection(text);
+ const emailRegex = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/g;
+ const phoneRegex = /(?:\+?\d[\d\s\(\)\-]{7,}\d)/g;
+ const allEmails = [...text.matchAll(emailRegex)].map(m => m[0].toLowerCase());
+ const allPhones = [...text.matchAll(phoneRegex)].map(m => m[0].replace(/\s+/g,'')).filter(p => p.replace(/\D/g,'').length >= 8);
+ const validIPObjs = extractValidIPs(text);
+ const ipCityPairs = buildIPCityPairs(text, validIPObjs);
+ const geoCoords = extractGeoCoords(text);
+ return { allEmails, allPhones, ipCityPairs, geoCoords, signatureSection };
+}
+
+function buildIPCityPairs(text, ipObjs) {
+ const pairs = [];
+ for (const { ip, index } of ipObjs) {
+ const start = Math.max(0, index - 400);
+ const end = Math.min(text.length, index + 400);
+ const ctx = text.slice(start, end);
+ const cityMatch = ctx.match(/(?:Cidade|City|cidade|Localiza[çc][aã]o|Location)[:\s\-]+([A-ZÀ-Ú][a-zA-ZÀ-ÿ\s\-]{2,40})/i);
+ const stateMatch = ctx.match(/(?:Estado|State|UF)[:\s\-]+([A-ZÀ-Ú][a-zA-ZÀ-ÿ\s\-]{2,40})/i);
+ let city = cityMatch ? cityMatch[1].trim() : null;
+ if (!city) {
+ const nearCity = ctx.match(/\b([A-ZÁÀÂÃÉÊÍÓÔÕÚÇ][a-záàâãéêíóôõúç]+(?:\s+[A-ZÁÀÂÃÉÊÍÓÔÕÚÇ][a-záàâãéêíóôõúç]+){0,3})\s*[\-\/,]\s*(?:[A-Z]{2}|Brasil|Brazil)/);
+ city = nearCity ? nearCity[1].trim() : null;
+ }
+ pairs.push({ ip, city, state: stateMatch ? stateMatch[1].trim() : null, context: ctx });
+ }
+ return pairs;
+}
+
+function extractSignatureSection(text) {
+ const markers = ['Relatório de Assinaturas','Página de Assinaturas','PÁGINA DE ASSINATURAS','Assinaturas Eletrônicas','ASSINATURAS','Registro de Assinatura','Log de Assinatura','Histórico de Assinatura','Pontos de autenticação'];
+ for (const m of markers) { const idx = text.indexOf(m); if (idx !== -1) return text.slice(idx); }
+ return text.slice(Math.floor(text.length * 0.6));
+}
+
+function extractBodyData(text) {
+ const body = text.slice(0, Math.floor(text.length * 0.65));
+ const emailRegex = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/g;
+ const phoneRegex = /(?:\+?\d[\d\s\(\)\-]{7,}\d)/g;
+ const emails = [...body.matchAll(emailRegex)].map(m => m[0].toLowerCase());
+ const phones = [...body.matchAll(phoneRegex)].map(m => m[0].replace(/\s+/g,'')).filter(p => p.replace(/\D/g,'').length >= 8);
+ return { emails, phones };
+}
+
+function extractGeoCoords(text) {
+ const coords = [];
+ const zapGeoRe = /[Ll]ocaliza[çc][aã]o\s+(?:aproximada)?[:\s]*([+-]?\d{1,3}\.\d{4,})\s*[,;]\s*([+-]?\d{1,3}\.\d{4,})/gi;
+ let m;
+ while ((m = zapGeoRe.exec(text)) !== null) {
+ const a = parseFloat(m[1]), b = parseFloat(m[2]);
+ if (isValidCoord(a, b)) coords.push({ lat: a, lon: b });
+ }
+ if (coords.length) return coords;
+ const latRe = /[Ll]at(?:itude)?[:\s]*([+-]?\d{1,3}\.\d{4,})/g;
+ const lonRe = /[Ll]on(?:gitude|g)?[:\s]*([+-]?\d{1,3}\.\d{4,})/g;
+ const lats = [], lons = [];
+ while ((m = latRe.exec(text)) !== null) lats.push({ val: parseFloat(m[1]), idx: m.index });
+ while ((m = lonRe.exec(text)) !== null) lons.push({ val: parseFloat(m[1]), idx: m.index });
+ for (const lat of lats) {
+ const nearest = lons.reduce((best, l) => Math.abs(l.idx - lat.idx) < Math.abs((best?.idx||9999) - lat.idx) ? l : best, null);
+ if (nearest && Math.abs(nearest.idx - lat.idx) < 400) coords.push({ lat: lat.val, lon: nearest.val });
+ }
+ return coords;
+}
+
+function isValidCoord(lat, lon) { return lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180 && !(lat===0 && lon===0); }
+
+function extractEmailsFromSection(text) {
+ return [...text.matchAll(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/g)].map(m => m[0].toLowerCase());
+}
+
+function signatoryEmailCheck(data, bodyData, checks) {
+ const { allEmails, signatureSection } = data;
+ if (!allEmails.length) { checks.push({ type:'warn', name:'E-mails não encontrados', detail:'Nenhum e-mail foi identificado no documento.', status:'warn' }); return; }
+ const sigEmails = [...new Set(extractEmailsFromSection(signatureSection||''))];
+ const bodyEmails = [...new Set(bodyData.emails)];
+ const allUniq = [...new Set(allEmails)];
+ if (sigEmails.length > 0 && bodyEmails.length > 0) {
+ const overlap = sigEmails.filter(e => bodyEmails.includes(e));
+ const type = overlap.length > 0 ? 'ok' : 'fail';
+ let detail = `<b>E-mails na assinatura:</b> ${sigEmails.map(e=>`<span class="val">${e}</span>`).join(' ')}<br>`;
+ detail += `<b>E-mails no corpo:</b> ${bodyEmails.map(e=>`<span class="val">${e}</span>`).join(' ')}<br>`;
+ detail += overlap.length > 0
+ ? `<span class="match">✓ ${overlap.length} e-mail(s) conferem entre corpo e assinatura.</span>`
+ : `<span class="mismatch">✗ Nenhum e-mail coincide entre corpo e página de assinaturas!</span>`;
+ checks.push({ type, name:'Verificação de E-mails', detail, status: type });
+ } else {
+ checks.push({ type:'info', name:'Verificação de E-mails', detail:`E-mails encontrados: ${allUniq.map(e=>`<span class="val">${e}</span>`).join(' ')}<br>Não foi possível separar as seções para comparação detalhada.`, status:'info' });
+ }
+}
+
+function signatoryPhoneCheck(data, bodyData, checks) {
+ const { allPhones } = data;
+ const bodyPhones = bodyData.phones;
+ if (!allPhones.length) { checks.push({ type:'warn', name:'Telefone — Não encontrado', detail:'Nenhum número de telefone foi identificado.', status:'warn' }); return; }
+ const norm = p => p.replace(/\D/g,'');
+ const sigPhones = [...new Set(allPhones.map(norm))];
+ const bPhones = [...new Set(bodyPhones.map(norm))];
+ if (bPhones.length > 0 && sigPhones.length > 0) {
+ const overlap = sigPhones.filter(p => bPhones.some(b => b.endsWith(p.slice(-8)) || p.endsWith(b.slice(-8))));
+ const type = overlap.length > 0 ? 'ok' : 'fail';
+ let detail = `<b>Telefones na assinatura:</b> ${[...new Set(allPhones)].map(p=>`<span class="val">${p}</span>`).join(' ')}<br>`;
+ detail += `<b>Telefones no corpo:</b> ${bodyPhones.map(p=>`<span class="val">${p}</span>`).join(' ')}<br>`;
+ detail += overlap.length > 0
+ ? `<span class="match">✓ Telefone(s) conferem entre corpo e assinatura.</span>`
+ : `<span class="mismatch">✗ Telefones não coincidem entre corpo e assinatura!</span>`;
+ checks.push({ type, name:'Verificação de Telefone', detail, status: type });
+ } else {
+ checks.push({ type:'info', name:'Verificação de Telefone', detail:`Telefones encontrados: ${[...new Set(allPhones)].map(p=>`<span class="val">${p}</span>`).join(' ')}<br>Não foi possível comparar seções.`, status:'info' });
+ }
+}
+
+async function ipCityCheck(data, checks) {
+ const { ipCityPairs } = data;
+ if (!ipCityPairs.length) {
+ checks.push({ type:'info', name:'IP — Não encontrado', detail:'Nenhum endereço IP público foi identificado no documento.', status:'info' }); return;
+ }
+ document.getElementById('ipNote').style.display = 'block';
+ for (const pair of ipCityPairs) {
+ let geoResult = null;
+ try {
+ setMsg(`Verificando IP ${pair.ip}…`);
+ const res = await fetch(`https://ipapi.co/${pair.ip}/json/`);
+ if (res.ok) geoResult = await res.json();
+ } catch(e) {}
+ if (!geoResult || geoResult.error) {
+ try {
+ const res2 = await fetch(`https://ip-api.com/json/${pair.ip}?fields=status,city,regionName,country,query`);
+ if (res2.ok) { const d = await res2.json(); if (d.status==='success') geoResult = { city: d.city, region: d.regionName, country_name: d.country }; }
+ } catch(e) {}
+ }
+ let type, detail;
+ if (geoResult && !geoResult.error) {
+ const geoCity = (geoResult.city||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+ const docCity = (pair.city||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+ detail = `<b>IP:</b> <span class="val">${pair.ip}</span><br>`;
+ detail += `<b>Cidade no contrato:</b> <span class="val">${pair.city||'—'}</span><br>`;
+ detail += `<b>Geolocalização do IP:</b> <span class="val">${geoResult.city||'?'} / ${geoResult.region||''} — ${geoResult.country_name||''}</span><br>`;
+ if (!pair.city) { type='info'; detail += `Cidade não especificada no documento.`; }
+ else if (geoCity && docCity && (geoCity.includes(docCity.slice(0,5)) || docCity.includes(geoCity.slice(0,5)))) { type='ok'; detail += `<span class="match">✓ Cidade do IP confere com o contrato.</span>`; }
+ else { type='warn'; detail += `<span class="mismatch">⚠ Cidade do IP difere da indicada no contrato. Verifique uso de VPN ou proxy.</span>`; }
+ } else {
+ type='warn';
+ detail = `<b>IP:</b> <span class="val">${pair.ip}</span><br>Não foi possível obter geolocalização.<br>`;
+ if (pair.city) detail += `Cidade no contrato: <span class="val">${pair.city}</span>`;
+ }
+ checks.push({ type, name:`IP · ${pair.ip}`, detail, status: type });
+ }
+}
+
+function geoLocationCheck(data, checks) {
+ const { geoCoords, ipCityPairs } = data;
+ if (!geoCoords.length) { checks.push({ type:'info', name:'Coordenadas GPS', detail:'Nenhuma coordenada geográfica encontrada no documento.', status:'info' }); return; }
+ for (const coord of geoCoords) {
+ const validBR = coord.lat >= -34 && coord.lat <= 5 && coord.lon >= -74 && coord.lon <= -28;
+ const mapsLink = `https://www.google.com/maps?q=${coord.lat},${coord.lon}`;
+ const matchingPair = ipCityPairs.find(p => p.city);
+ let detail = `<b>Latitude:</b> <span class="val">${coord.lat}</span> &nbsp; <b>Longitude:</b> <span class="val">${coord.lon}</span><br>`;
+ if (!isValidCoord(coord.lat, coord.lon)) { checks.push({ type:'warn', name:'Coordenadas GPS', detail: detail+`<span class="mismatch">⚠ Coordenadas fora do intervalo válido.</span>`, status:'warn' }); continue; }
+ detail += `<a href="${mapsLink}" target="_blank" style="color:var(--blue);font-weight:700;font-size:0.75rem;">🗺 Ver no Google Maps</a><br>`;
+ if (!validBR) {
+ detail += `<span class="mismatch">⚠ Coordenadas fora do território brasileiro. Verifique a origem da assinatura.</span>`;
+ checks.push({ type:'warn', name:'Coordenadas GPS', detail, status:'warn' });
+ } else {
+ detail += `<span class="match">✓ Coordenadas dentro do Brasil.</span>`;
+ if (matchingPair && matchingPair.city) detail += `<br>Verifique se o local no mapa corresponde à cidade: <span class="val">${matchingPair.city}</span>`;
+ checks.push({ type:'ok', name:'Coordenadas GPS', detail, status:'ok' });
+ }
+ }
+}
+
+function renderResults(checks) {
+ const container = document.getElementById('checksContainer');
+ container.innerHTML = '';
+ const icons = {
+ ok: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>`,
+ warn: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+ fail: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>`,
+ info: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`
+ };
+ const labels = { ok:'Conferido', warn:'Atenção', fail:'Falha', info:'Info' };
+ const failCount = checks.filter(c => c.type==='fail').length;
+ const warnCount = checks.filter(c => c.type==='warn').length;
+ const badge = document.getElementById('scoreBadge');
+ if (failCount > 0) { badge.className='score-badge fail'; badge.textContent=`${failCount} inconsistência(s) encontrada(s)`; }
+ else if (warnCount > 0) { badge.className='score-badge warn'; badge.textContent=`${warnCount} ponto(s) de atenção`; }
+ else { badge.className='score-badge ok'; badge.textContent='Tudo verificado ✓'; }
+
+ const groups = [
+ { label:'Identidade dos Signatários', items: checks.filter(c => c.name.includes('E-mail') || c.name.includes('Telefone')) },
+ { label:'Origem da Assinatura', items: checks.filter(c => c.name.includes('IP') || c.name.includes('Coordenada') || c.name.includes('GPS')) }
+ ];
+ for (const group of groups) {
+ if (!group.items.length) continue;
+ const lbl = document.createElement('div');
+ lbl.className = 'section-label';
+ lbl.textContent = group.label;
+ container.appendChild(lbl);
+ for (const c of group.items) {
+ const card = document.createElement('div');
+ card.className = `check-card status-${c.type}`;
+ card.innerHTML = `
+ <div class="check-icon ${c.type}">${icons[c.type]}</div>
+ <div class="check-body">
+ <div class="check-name">${c.name}</div>
+ <div class="check-detail">${c.detail}</div>
+ </div>
+ <div class="check-status ${c.type}">${labels[c.type]}</div>`;
+ container.appendChild(card);
+ }
+ }
+ show('results');
+}
+
+function toggleRaw() {
+ const box = document.getElementById('rawBox');
+ const open = box.style.display === 'block';
+ box.style.display = open ? 'none' : 'block';
+ document.getElementById('rawToggle').innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> ${open ? 'Ver texto extraído do PDF' : 'Ocultar texto extraído'}`;
+}
+function resetApp() { document.getElementById('fileInput').value = ''; document.getElementById('ipNote').style.display = 'none'; show('upload'); }
+function show(panel) {
+ document.getElementById('uploadZone').style.display = panel==='upload' ? 'block' : 'none';
+ document.getElementById('processing').style.display = panel==='processing' ? 'flex' : 'none';
+ document.getElementById('results').style.display = panel==='results' ? 'block' : 'none';
+}
+</script>
+</body>
+</html>
