@@ -1,0 +1,73 @@
+{
+  "_aviso": "MODELO DE DOCUMENTAÇÃO. Não enviar à API da Meta.",
+  "nome": "Qualificação | Juros Financiamento Carro e Moto",
+  "titulo_apresentacao": "Entenda o seu financiamento",
+  "descricao": "Responda às perguntas sobre o financiamento do seu carro ou moto. A análise depende do contrato e das circunstâncias do caso. Não há promessa de resultado.",
+  "tipo_formulario": "a confirmar (sugestão: 'Maior intenção', com tela de revisão)",
+  "perguntas": [
+    {
+      "ordem": 1,
+      "texto": "O que foi financiado?",
+      "tipo": "múltipla escolha",
+      "opcoes": [
+        "Carro",
+        "Moto"
+      ]
+    },
+    {
+      "ordem": 2,
+      "texto": "Qual banco ou financeira aparece no contrato?",
+      "tipo": "múltipla escolha (conforme o briefing)",
+      "opcoes": [
+        "Banco ou financeira informado no contrato",
+        "Não lembro"
+      ],
+      "_observacao": "Conforme o briefing. Atenção: com estas duas opções, o nome do banco não é capturado. Alternativa a confirmar: campo de resposta curta ou lista de instituições + 'Outro' + 'Não lembro'."
+    },
+    {
+      "ordem": 3,
+      "texto": "O financiamento já está quitado?",
+      "tipo": "múltipla escolha",
+      "opcoes": [
+        "Sim, já está quitado",
+        "Não, ainda estou pagando"
+      ]
+    },
+    {
+      "ordem": 4,
+      "texto": "Você lembra quantas parcelas foram contratadas? Informe uma quantidade aproximada.",
+      "tipo": "resposta livre"
+    }
+  ],
+  "informacoes_de_contato": [
+    {
+      "campo": "Nome completo",
+      "obrigatorio": true
+    },
+    {
+      "campo": "Telefone",
+      "obrigatorio": true,
+      "_observacao": "Não exigir verificação por SMS se não estiver configurada."
+    },
+    {
+      "campo": "E-mail",
+      "obrigatorio": "a confirmar (somente se necessário para a operação)"
+    }
+  ],
+  "mensagem_uso_dos_dados": "Usaremos seus dados para analisar as informações do financiamento e entrar em contato sobre a solicitação. Consulte a política de privacidade da Brandão Correa Assessoria Jurídica.",
+  "politica_de_privacidade_url": "a confirmar",
+  "tela_de_conclusao": {
+    "titulo": "Recebemos suas informações",
+    "descricao": "A equipe da Brandão Correa Assessoria Jurídica fará uma análise inicial das informações e poderá entrar em contato pelo telefone informado. O preenchimento não garante resultado ou contratação.",
+    "cta": "Saiba mais",
+    "link": "https://brandaocorrea.bitrix24.site/2684/"
+  },
+  "nao_solicitar": [
+    "CPF",
+    "RG",
+    "número completo do contrato",
+    "dados bancários",
+    "documentos sensíveis",
+    "códigos promocionais"
+  ]
+}

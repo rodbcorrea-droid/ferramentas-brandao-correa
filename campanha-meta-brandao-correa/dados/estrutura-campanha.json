@@ -1,0 +1,362 @@
+{
+  "_aviso": "MODELO DE DOCUMENTAÇÃO. Não enviar à API da Meta. Não contém IDs, tokens ou credenciais. Nada foi publicado.",
+  "_pendencias": "Todo valor marcado como 'a confirmar' depende de validação do cliente ou da política vigente da Meta.",
+  "campanha": {
+    "nome": "LEADS | Financiamento Veículos | Análise Contratual | BR",
+    "marca": "Brandão Correa Assessoria Jurídica",
+    "objetivo": "Leads",
+    "conversao": "Formulário instantâneo",
+    "orcamento_diario_total_brl": 50,
+    "tipo_orcamento": "CBO sugerido (a confirmar); alternativa: ABO 30/20",
+    "status_alvo": "RASCUNHO / PAUSADA até autorização manual final",
+    "categoria_especial_de_anuncio": "a confirmar antes de criar (ver conformidade/checklist-meta.md)",
+    "landing_page": "https://brandaocorrea.bitrix24.site/2684/"
+  },
+  "conjuntos": [
+    {
+      "ordem": 1,
+      "regiao": "Sudeste",
+      "estados": [
+        {
+          "uf": "SP",
+          "nome": "São Paulo"
+        },
+        {
+          "uf": "RJ",
+          "nome": "Rio de Janeiro"
+        },
+        {
+          "uf": "MG",
+          "nome": "Minas Gerais"
+        },
+        {
+          "uf": "ES",
+          "nome": "Espírito Santo"
+        }
+      ],
+      "nome_base": "SUDESTE | HOMENS | 22+ | {PÚBLICO}",
+      "variantes_publico": [
+        "AMPLO ADVANTAGE+",
+        "INTERESSES SUGERIDOS"
+      ],
+      "genero": "Homens (configuração solicitada; não alterar sem autorização)",
+      "idade_min": 22,
+      "idade_max": "65+",
+      "tipo_localizacao": "Pessoas que moram nesta localização",
+      "fase": "1",
+      "orcamento_diario_sugerido_brl": 30,
+      "observacao": "Orçamento principal."
+    },
+    {
+      "ordem": 2,
+      "regiao": "Sul",
+      "estados": [
+        {
+          "uf": "PR",
+          "nome": "Paraná"
+        },
+        {
+          "uf": "SC",
+          "nome": "Santa Catarina"
+        },
+        {
+          "uf": "RS",
+          "nome": "Rio Grande do Sul"
+        }
+      ],
+      "nome_base": "SUL | HOMENS | 22+ | {PÚBLICO}",
+      "variantes_publico": [
+        "AMPLO ADVANTAGE+",
+        "INTERESSES SUGERIDOS"
+      ],
+      "genero": "Homens (configuração solicitada; não alterar sem autorização)",
+      "idade_min": 22,
+      "idade_max": "65+",
+      "tipo_localizacao": "Pessoas que moram nesta localização",
+      "fase": "1 (unificado com Centro-Oeste) / 2 (separado)",
+      "orcamento_diario_sugerido_brl": 10,
+      "observacao": "Na fase 1, unificar com o conjunto 3 (R$ 20/dia somados)."
+    },
+    {
+      "ordem": 3,
+      "regiao": "Centro-Oeste",
+      "estados": [
+        {
+          "uf": "MT",
+          "nome": "Mato Grosso"
+        },
+        {
+          "uf": "MS",
+          "nome": "Mato Grosso do Sul"
+        },
+        {
+          "uf": "GO",
+          "nome": "Goiás"
+        },
+        {
+          "uf": "DF",
+          "nome": "Distrito Federal"
+        }
+      ],
+      "nome_base": "CENTRO-OESTE | HOMENS | 22+ | {PÚBLICO}",
+      "variantes_publico": [
+        "AMPLO ADVANTAGE+",
+        "INTERESSES SUGERIDOS"
+      ],
+      "genero": "Homens (configuração solicitada; não alterar sem autorização)",
+      "idade_min": 22,
+      "idade_max": "65+",
+      "tipo_localizacao": "Pessoas que moram nesta localização",
+      "fase": "1 (unificado com Sul) / 2 (separado)",
+      "orcamento_diario_sugerido_brl": 10,
+      "observacao": "Na fase 1, unificar com o conjunto 2."
+    },
+    {
+      "ordem": 4,
+      "regiao": "Norte-Nordeste",
+      "estados": [
+        {
+          "uf": "AC",
+          "nome": "Acre"
+        },
+        {
+          "uf": "AP",
+          "nome": "Amapá"
+        },
+        {
+          "uf": "AM",
+          "nome": "Amazonas"
+        },
+        {
+          "uf": "PA",
+          "nome": "Pará"
+        },
+        {
+          "uf": "RO",
+          "nome": "Rondônia"
+        },
+        {
+          "uf": "RR",
+          "nome": "Roraima"
+        },
+        {
+          "uf": "TO",
+          "nome": "Tocantins"
+        },
+        {
+          "uf": "AL",
+          "nome": "Alagoas"
+        },
+        {
+          "uf": "BA",
+          "nome": "Bahia"
+        },
+        {
+          "uf": "CE",
+          "nome": "Ceará"
+        },
+        {
+          "uf": "MA",
+          "nome": "Maranhão"
+        },
+        {
+          "uf": "PB",
+          "nome": "Paraíba"
+        },
+        {
+          "uf": "PE",
+          "nome": "Pernambuco"
+        },
+        {
+          "uf": "PI",
+          "nome": "Piauí"
+        },
+        {
+          "uf": "RN",
+          "nome": "Rio Grande do Norte"
+        },
+        {
+          "uf": "SE",
+          "nome": "Sergipe"
+        }
+      ],
+      "nome_base": "NORTE-NORDESTE | HOMENS | 22+ | {PÚBLICO}",
+      "variantes_publico": [
+        "AMPLO ADVANTAGE+",
+        "INTERESSES SUGERIDOS"
+      ],
+      "genero": "Homens (configuração solicitada; não alterar sem autorização)",
+      "idade_min": 22,
+      "idade_max": "65+",
+      "tipo_localizacao": "Pessoas que moram nesta localização",
+      "fase": "3 (a confirmar)",
+      "orcamento_diario_sugerido_brl": 0,
+      "observacao": "Opção: Brasil excluindo os estados dos conjuntos 1 a 3 para evitar sobreposição."
+    }
+  ],
+  "posicionamentos": {
+    "modo": "Advantage+ placements",
+    "formatos": [
+      "9:16 1080x1920",
+      "4:5 1080x1350",
+      "1:1 1080x1080",
+      "16:9 1920x1080 (opcional)"
+    ],
+    "observacao": "Messenger só se houver estrutura de atendimento. Audience Network: acompanhar a qualidade dos leads."
+  },
+  "formulario": "formulario-meta.json",
+  "utm": {
+    "utm_source": "meta",
+    "utm_medium": "paid_social",
+    "utm_campaign": "leads_financiamento_veiculos",
+    "utm_content": "{{ad.name}}",
+    "utm_term": "{{adset.name}}"
+  },
+  "anuncios_planejados": [
+    {
+      "id": "R15-01",
+      "nome": "REELS | TAXA MÉDIA | EDUCATIVO | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "R15-02",
+      "nome": "REELS | VALOR DA PARCELA | EDUCATIVO | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "R15-03",
+      "nome": "REELS | QUITADO | PERGUNTA | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "R15-04",
+      "nome": "REELS | CHECKLIST | EDUCATIVO | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "R15-05",
+      "nome": "REELS | EDUCAÇÃO FINANCEIRA | INSTITUCIONAL | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "R30-01",
+      "nome": "REELS | TAXA MÉDIA | PERGUNTA | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "R30-02",
+      "nome": "REELS | CHECKLIST | EDUCATIVO | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "R30-03",
+      "nome": "REELS | TAXA MÉDIA | PERGUNTA | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "R30-04",
+      "nome": "REELS | VALOR DA PARCELA | EDUCATIVO | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "R30-05",
+      "nome": "REELS | EDUCAÇÃO FINANCEIRA | INSTITUCIONAL | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "R45-01",
+      "nome": "REELS | CHECKLIST | EDUCATIVO | V03",
+      "status": "a produzir"
+    },
+    {
+      "id": "R45-02",
+      "nome": "REELS | EDUCAÇÃO FINANCEIRA | EDUCATIVO | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "R45-03",
+      "nome": "REELS | QUITADO | EDUCATIVO | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "S01",
+      "nome": "STORIES | CHECKLIST | EDUCATIVO | V03",
+      "status": "a produzir"
+    },
+    {
+      "id": "S02",
+      "nome": "STORIES | TAXA MÉDIA | EDUCATIVO | V03",
+      "status": "a produzir"
+    },
+    {
+      "id": "S03",
+      "nome": "STORIES | QUITADO | PERGUNTA | V03",
+      "status": "a produzir"
+    },
+    {
+      "id": "S04",
+      "nome": "STORIES | VALOR DA PARCELA | EDUCATIVO | V03",
+      "status": "a produzir"
+    },
+    {
+      "id": "S05",
+      "nome": "STORIES | EDUCAÇÃO FINANCEIRA | INSTITUCIONAL | V03",
+      "status": "a produzir"
+    },
+    {
+      "id": "ST01",
+      "nome": "ESTÁTICO | TAXA MÉDIA | EDUCATIVO | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "ST02",
+      "nome": "ESTÁTICO | QUITADO | PERGUNTA | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "ST03",
+      "nome": "ESTÁTICO | CHECKLIST | EDUCATIVO | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "ST04",
+      "nome": "ESTÁTICO | VALOR DA PARCELA | EDUCATIVO | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "ST05",
+      "nome": "ESTÁTICO | EDUCAÇÃO FINANCEIRA | INSTITUCIONAL | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "ST06",
+      "nome": "ESTÁTICO | CHECKLIST | EDUCATIVO | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "ST07",
+      "nome": "ESTÁTICO | CHECKLIST | EDUCATIVO | V03",
+      "status": "a produzir"
+    },
+    {
+      "id": "ST08",
+      "nome": "ESTÁTICO | EDUCAÇÃO FINANCEIRA | INSTITUCIONAL | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "CAR-A",
+      "nome": "CARROSSEL | EDUCAÇÃO FINANCEIRA | EDUCATIVO | V01",
+      "status": "a produzir"
+    },
+    {
+      "id": "CAR-B",
+      "nome": "CARROSSEL | CHECKLIST | PERGUNTA | V02",
+      "status": "a produzir"
+    },
+    {
+      "id": "CAR-C",
+      "nome": "CARROSSEL | VALOR DA PARCELA | EDUCATIVO | V03",
+      "status": "a produzir"
+    }
+  ]
+}
