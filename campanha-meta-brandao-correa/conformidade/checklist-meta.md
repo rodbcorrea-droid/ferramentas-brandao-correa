@@ -68,7 +68,9 @@ Este checklist não substitui a leitura das políticas vigentes da Meta. Itens m
 ## 7. Conta e Página
 
 - [x] Conta de anúncios definida pelo cliente: `1155384176705579`. Conferir, antes de criar, que está ativa, com forma de pagamento e sem restrição.
-- [ ] Página do Facebook e perfil do Instagram vinculados **(a confirmar)**.
+- [x] Página do Facebook (`2033836416865143`) e Instagram (`@brandaocorrea.adv`) vinculados à conta (consulta de 2026-10-24).
+- [ ] 🚫 **Termos de lead ads aceitos na Página.** A API retornou `leadgen_tos_accepted = false`. Aceitar em https://www.facebook.com/legal/leadgen/tos antes de criar o conjunto.
+- [ ] Pixel de site instalado na landing page. Hoje a conta só tem o dataset de WhatsApp.
 - [ ] Forma de pagamento ativa.
 - [ ] Sem restrição ou desativação pendente na conta. Observação: o histórico da conta do cliente indicou contas desativadas por “atividade incomum” em outro contexto. Confirmar que a conta escolhida está regular antes de investir produção.
 

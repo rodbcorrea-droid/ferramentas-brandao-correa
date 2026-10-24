@@ -16,7 +16,29 @@
 | Política de privacidade | `https://brandaocorrea.bitrix24.site/politica/` |
 | Conta de anúncios | `1155384176705579` (nome na listagem anterior: “SALÁRIO MATERNIDADE - DR.RODRIGO BRANDÃO”, moeda BRL) |
 
+## Achados da conta `1155384176705579` (consulta em 2026-10-24)
+
+Acesso autorizado pelo cliente. Foi feita **somente leitura**: nada foi criado, alterado ou publicado.
+
+| Item | Achado |
+|---|---|
+| Página do Facebook | “Brandão Correa Assessoria Jurídica” (`2033836416865143`) |
+| Instagram | `@brandaocorrea.adv` (`17841407573996167`) |
+| **Termos de lead ads** | **A API informa que a Página NÃO aceitou** (`leadgen_tos_accepted = false`). Aceitar em https://www.facebook.com/legal/leadgen/tos antes de criar o conjunto de anúncios. **Bloqueia a criação.** |
+| **Pixel de site** | **Nenhum.** O único dataset é “WhatsApp Marketing Message Event Sharing”. Sem pixel na landing page não há *Landing page views* nem remarketing por visita ao site. |
+| Públicos personalizados | Nenhum. Os públicos de remarketing precisam ser criados do zero. |
+| Campanhas existentes | 34, **todas pausadas e sem gasto nos últimos 30 dias** (inclui “[TESTE] [RASCUNHO] [NÃO PUBLICAR]” e várias cópias). A conta está sem histórico recente de entrega. |
+
 **Ainda não verificado:** as duas páginas (landing e política) não puderam ser abertas a partir do ambiente em que o pacote foi montado (domínio bloqueado pela rede). O domínio da landing, `acidentesinss`, difere do domínio `inssacidentes` usado em todos os documentos do repositório. **Confirmar que a URL está correta** (pode ser outro site ou erro de digitação).
+
+## Como enviar os criativos e a landing page já prontos
+
+Os arquivos que você mostrou (PNGs `criativo1_taxas`, `criativo2_quitado`, `criativo3_escondidas`, em 1:1 e 9:16, e `landing-revisao-veiculos.html`) estão no seu computador. **Este ambiente não os alcança.** Duas formas:
+
+1. **Pelo chat:** arraste os PNGs e o HTML para a conversa. Eu consigo ver imagens e ler o HTML.
+2. **Pelo repositório:** copie os arquivos para `campanha-meta-brandao-correa/materiais-finais/` e envie para a branch `claude/mcp-meta-ads-analysis-d488zv`.
+
+Com os arquivos, eu reviso cada peça e a landing contra `conformidade/` antes de qualquer envio para o Meta. O upload de imagens ao Meta e a criação de anúncios só acontecem depois dessa revisão e da sua confirmação.
 
 ---
 

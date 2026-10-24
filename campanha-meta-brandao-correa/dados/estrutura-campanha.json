@@ -19,7 +19,22 @@
     "categoria_especial_de_anuncio": "Decisão do cliente (2026-10-24): prosseguir com o público solicitado. Se a Meta restringir gênero/idade na configuração, usar o que for permitido e registrar; não contornar.",
     "conta_de_anuncios_id": "1155384176705579",
     "conta_de_anuncios_nome": "SALÁRIO MATERNIDADE - DR.RODRIGO BRANDÃO (conforme listagem anterior da sessão; moeda BRL)",
-    "pagina_facebook_e_instagram": "a confirmar",
+    "pagina_facebook": {
+      "id": "2033836416865143",
+      "nome": "Brandão Correa Assessoria Jurídica",
+      "leadgen_tos_accepted_segundo_a_api": false
+    },
+    "instagram": {
+      "id": "17841407573996167",
+      "usuario": "brandaocorrea.adv"
+    },
+    "achados_da_conta_2026_10_24": {
+      "fonte": "Leitura somente de consulta, autorizada pelo cliente em 2026-10-24. Nada foi criado, alterado ou publicado.",
+      "campanhas": "34 campanhas, todas PAUSADAS, sem gasto nos últimos 30 dias (inclui '[TESTE] [RASCUNHO] [NÃO PUBLICAR]' e várias cópias).",
+      "datasets_pixels": "Apenas 'WhatsApp Marketing Message Event Sharing'. Nenhum pixel de site encontrado.",
+      "publicos_personalizados": "Nenhum.",
+      "termos_de_lead_ads": "A API informa leadgen_tos_accepted=false para a Página. Aceitar em https://www.facebook.com/legal/leadgen/tos antes de criar o conjunto de anúncios."
+    },
     "politica_de_privacidade": "https://brandaocorrea.bitrix24.site/politica/",
     "landing_page": "https://acidentesinss.bitrix24.site/jurosfinan/"
   },

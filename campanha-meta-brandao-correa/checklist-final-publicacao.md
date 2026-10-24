@@ -8,7 +8,7 @@ Itens ✅ valem para o **texto do pacote**. Eles precisam ser revistos de novo s
 
 ## Configuração
 
-- [ ] ⏳ **PENDENTE** Página correta selecionada. (Conta definida: `1155384176705579`. Página e Instagram a confirmar.)
+- [ ] ⏳ **PENDENTE** Página correta selecionada. (Conta `1155384176705579`; Página `2033836416865143`; Instagram `@brandaocorrea.adv`. **Termos de lead ads não aceitos segundo a API: aceitar antes de criar.**)
 - [ ] ⏳ **PENDENTE** Campanha com objetivo Leads. (Documentada em `dados/estrutura-campanha.json`; não criada.)
 - [ ] ⏳ **PENDENTE** Orçamento revisado. (R$ 50/dia; divisão e tipo CBO/ABO a confirmar.)
 - [ ] ⏳ **PENDENTE** Regiões revisadas.

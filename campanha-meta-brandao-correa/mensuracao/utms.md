@@ -35,7 +35,7 @@ Consequência prática: no Bitrix24, registrar a **origem do lead** a partir dos
 | Evento | Onde | Observação |
 |---|---|---|
 | `Lead` | Formulário nativo e landing page | Evento principal |
-| `PageView` | Landing page | Exige pixel instalado (a confirmar em `bitrix24.site`) |
+| `PageView` | Landing page | **Hoje não há pixel de site na conta `1155384176705579`** (só o dataset de WhatsApp, consulta de 2026-10-24). Exige pixel instalado na landing page |
 | `ViewContent` | Landing page | Leitura do conteúdo |
 | `Contact` ou personalizado | Clique em atendimento (se houver botão de WhatsApp) | A confirmar |
 | `LeadQualificado` (personalizado) | CRM → Meta | Envio a partir do Bitrix24 após a triagem. Exige configuração de API de conversões, **fora do escopo deste pacote** |

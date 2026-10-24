@@ -90,7 +90,7 @@ Não criar segmentações que impliquem conhecimento de situação financeira vu
 | Visitantes da landing page | Pixel/evento no site | **A confirmar** se o pixel está instalado em `bitrix24.site` |
 | Iniciou atendimento | Lista do CRM (Bitrix24) | Exige tratamento de dados e base legal (LGPD). A confirmar |
 
-Tamanho mínimo de público e janela de retenção dependem da conta (**a confirmar**).
+**Estado da conta `1155384176705579` (2026-10-24): nenhum público personalizado existe e não há pixel de site.** Portanto: os públicos de vídeo, Instagram, Página e formulário só passam a acumular **depois** que houver anúncios no ar; “visitantes da landing page” exige instalar um pixel antes. Remarketing não é utilizável no lançamento. Tamanho mínimo de público e janela de retenção dependem da conta (**a confirmar**).
 
 ### Exclusões obrigatórias
 
