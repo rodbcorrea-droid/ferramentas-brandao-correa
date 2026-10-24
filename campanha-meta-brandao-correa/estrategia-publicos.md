@@ -2,20 +2,20 @@
 
 ## 1. Alerta antes de configurar
 
-**[Provável] Possível categoria especial de anúncio.** Se a Meta classificar a campanha como “produtos e serviços financeiros”, a segmentação por **gênero e idade** e algumas opções de localização e de detalhamento ficam restritas ou indisponíveis. Isso inviabilizaria a configuração “homens, 22+”.
+**[Provável] Possível categoria especial de anúncio.** Se a Meta classificar a campanha como “produtos e serviços financeiros”, a segmentação por **gênero e idade** e algumas opções de localização e de detalhamento ficam restritas ou indisponíveis. Isso poderia restringir a segmentação por gênero e idade.
 
-**Decisão do cliente (2026-10-24): prosseguir com “homens, 22+”.** Na prática: montar o conjunto como especificado abaixo. Se, na hora de configurar, a Meta exigir a categoria ou bloquear gênero e idade, usar o público que a Meta permitir, **registrar a diferença neste arquivo** e avisar o cliente. Não contornar a restrição (por exemplo, não declarar uma categoria diferente da aplicável).
+**Decisão do cliente (2026-10-24, após a pesquisa em `pesquisa-publico.md`): seguir a recomendação: todos os gêneros, 22 a 65+, Advantage+ Audience ligado, sem interesses. Substitui a escolha inicial de “homens, 22+”. Na configuração, se a Meta exigir categoria ou bloquear gênero e idade, usar o permitido e registrar a diferença aqui. Não contornar a restrição.**
 
 ## 2. Público inicial solicitado
 
 | Item | Configuração |
 |---|---|
-| Gênero | Homens (conforme solicitado). Não alterar a configuração principal sem autorização. |
+| Gênero | **Todos os gêneros** (decisão de 2026-10-24; antes: homens). Alternativa, se o cliente quiser forçar homens: desligar o Advantage+ Audience e aceitar o menor alcance. |
 | Idade | 22 a 65+ |
 | Localização | **Pessoas que moram nesta localização**. Evitar “estiveram recentemente” e segmentações de viagem. |
 | Perfil | Quem financiou carro ou moto; contratos em andamento e quitados; interesse em veículos, financiamento, crédito, bancos, educação financeira e defesa do consumidor. |
 
-**Teste futuro (não ativar sem autorização):** conjunto com todos os gêneros. A questão jurídica não é exclusiva de homens.
+**Medição:** depois de 10 a 14 dias, olhar o recorte por gênero e idade como leitura descritiva, comparando leads **qualificados** no Bitrix24. Moto tem viés masculino (69% dos motociclistas); criativos separados por veículo ficam para depois.
 
 ## 3. Regiões e conjuntos
 

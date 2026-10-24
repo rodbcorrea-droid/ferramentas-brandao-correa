@@ -16,7 +16,7 @@ Este checklist não substitui a leitura das políticas vigentes da Meta. Itens m
 
 | Decisão | Efeito |
 |---|---|
-| Declarar a categoria | Gênero e idade podem ficar indisponíveis. O público “homens, 22+” não poderá ser usado como pedido. Ajustar `estrategia-publicos.md`. |
+| Declarar a categoria | Gênero e idade podem ficar indisponíveis. Como o público agora é **todos os gêneros**, 22+, o impacto prático é menor. |
 | Não declarar | Risco de reprovação ou restrição da conta se a Meta entender que a categoria se aplicava. |
 
 - [x] Decisão registrada: o cliente decidiu **prosseguir com o público solicitado** (2026-10-24).

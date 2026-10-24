@@ -4,6 +4,8 @@
 
 ## 1. Recomendação
 
+**Decisão do cliente (2026-10-24): seguir esta recomendação.**
+
 | Item | Recomendação | Confiança |
 |---|---|---|
 | Gênero | **Todos os gêneros** na fase 1. Medir o recorte por gênero depois e decidir com leads qualificados | [Provável] |

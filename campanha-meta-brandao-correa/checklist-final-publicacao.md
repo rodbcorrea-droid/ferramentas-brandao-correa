@@ -13,7 +13,7 @@ Itens ✅ valem para o **texto do pacote**. Eles precisam ser revistos de novo s
 - [ ] ⏳ **PENDENTE** Orçamento revisado. (R$ 50/dia; divisão e tipo CBO/ABO a confirmar.)
 - [ ] ⏳ **PENDENTE** Regiões revisadas.
 - [ ] ⏳ **PENDENTE** Idade revisada. ⚠️ Cliente decidiu prosseguir com 22+; conferir o que a Meta permite na configuração.
-- [ ] ⏳ **PENDENTE** Gênero revisado. ⚠️ Cliente decidiu prosseguir com homens; conferir o que a Meta permite na configuração.
+- [ ] ⏳ **PENDENTE** Gênero revisado. ⚠️ Decisão de 2026-10-24: todos os gêneros (antes: homens). Conferir na configuração.
 
 ## Formulário
 

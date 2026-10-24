@@ -2,7 +2,7 @@
   "_aviso": "MODELO DE DOCUMENTAÇÃO. Não enviar à API da Meta. Não contém IDs, tokens ou credenciais. Nada foi publicado.",
   "_pendencias": "Todo valor marcado como 'a confirmar' depende de validação do cliente ou da política vigente da Meta.",
   "decisoes_do_cliente_2026_10_24": [
-    "Prosseguir com homens, 22+, mesmo havendo risco de restrição da Meta.",
+    "Público: todos os gêneros, 22 a 65+, Advantage+ ligado, sem interesses (decisão de 2026-10-24, após a pesquisa; substitui a escolha inicial de homens 22+).",
     "Regras de publicidade da OAB: revisadas pelo cliente.",
     "Landing page: https://acidentesinss.bitrix24.site/jurosfinan/",
     "Política de privacidade: https://brandaocorrea.bitrix24.site/politica/",
@@ -69,12 +69,12 @@
           "nome": "Espírito Santo"
         }
       ],
-      "nome_base": "SUDESTE | HOMENS | 22+ | {PÚBLICO}",
+      "nome_base": "SUDESTE | TODOS | 22+ | {PÚBLICO}",
       "variantes_publico": [
         "AMPLO ADVANTAGE+",
         "INTERESSES SUGERIDOS"
       ],
-      "genero": "Homens (configuração solicitada; não alterar sem autorização)",
+      "genero": "Todos os gêneros (decisão de 2026-10-24, após a pesquisa em pesquisa-publico.md; a escolha inicial era homens)",
       "idade_min": 22,
       "idade_max": "65+",
       "tipo_localizacao": "Pessoas que moram nesta localização",
@@ -99,12 +99,12 @@
           "nome": "Rio Grande do Sul"
         }
       ],
-      "nome_base": "SUL | HOMENS | 22+ | {PÚBLICO}",
+      "nome_base": "SUL | TODOS | 22+ | {PÚBLICO}",
       "variantes_publico": [
         "AMPLO ADVANTAGE+",
         "INTERESSES SUGERIDOS"
       ],
-      "genero": "Homens (configuração solicitada; não alterar sem autorização)",
+      "genero": "Todos os gêneros (decisão de 2026-10-24, após a pesquisa em pesquisa-publico.md; a escolha inicial era homens)",
       "idade_min": 22,
       "idade_max": "65+",
       "tipo_localizacao": "Pessoas que moram nesta localização",
@@ -133,12 +133,12 @@
           "nome": "Distrito Federal"
         }
       ],
-      "nome_base": "CENTRO-OESTE | HOMENS | 22+ | {PÚBLICO}",
+      "nome_base": "CENTRO-OESTE | TODOS | 22+ | {PÚBLICO}",
       "variantes_publico": [
         "AMPLO ADVANTAGE+",
         "INTERESSES SUGERIDOS"
       ],
-      "genero": "Homens (configuração solicitada; não alterar sem autorização)",
+      "genero": "Todos os gêneros (decisão de 2026-10-24, após a pesquisa em pesquisa-publico.md; a escolha inicial era homens)",
       "idade_min": 22,
       "idade_max": "65+",
       "tipo_localizacao": "Pessoas que moram nesta localização",
@@ -215,12 +215,12 @@
           "nome": "Sergipe"
         }
       ],
-      "nome_base": "NORTE-NORDESTE | HOMENS | 22+ | {PÚBLICO}",
+      "nome_base": "NORTE-NORDESTE | TODOS | 22+ | {PÚBLICO}",
       "variantes_publico": [
         "AMPLO ADVANTAGE+",
         "INTERESSES SUGERIDOS"
       ],
-      "genero": "Homens (configuração solicitada; não alterar sem autorização)",
+      "genero": "Todos os gêneros (decisão de 2026-10-24, após a pesquisa em pesquisa-publico.md; a escolha inicial era homens)",
       "idade_min": 22,
       "idade_max": "65+",
       "tipo_localizacao": "Pessoas que moram nesta localização",

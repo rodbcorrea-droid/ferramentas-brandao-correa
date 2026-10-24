@@ -71,7 +71,7 @@ Observação: nos conceitos 1 e 4, os ganchos do briefing contêm “seu financi
 
 ## 6. Pontos de atenção (leia antes de produzir)
 
-**[Provável] A Meta pode classificar esta campanha como categoria especial de anúncio (produtos e serviços financeiros).** Se isso ocorrer, segmentação por gênero e idade (22+, homens) e parte das opções de público ficam restritas. **Decisão do cliente (2026-10-24): prosseguir com o público solicitado.** Na configuração, se a Meta bloquear gênero ou idade, usar o que for permitido e registrar a diferença. Não contornar a restrição. Ver `conformidade/checklist-meta.md`.
+**[Provável] A Meta pode classificar esta campanha como categoria especial de anúncio (produtos e serviços financeiros).** Se isso ocorrer, a segmentação por gênero e idade pode ficar restrita. **Decisão do cliente (2026-10-24): todos os gêneros, 22 a 65+**, o que reduz esse impacto. Na configuração, se a Meta restringir algo, usar o permitido e registrar. Não contornar. Ver `conformidade/checklist-meta.md`.
 
 **[Provável] A publicidade de advocacia no Brasil tem regras próprias da OAB** (Provimento 205/2021 e atualizações). **O cliente informou, em 2026-10-24, que a revisão está feita.** Este pacote não verificou essa revisão; os textos foram escritos de forma sóbria e informativa. Ver `conformidade/checklist-publicidade-juridica.md`.
 

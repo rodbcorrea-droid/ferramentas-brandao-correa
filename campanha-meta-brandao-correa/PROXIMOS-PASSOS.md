@@ -21,13 +21,13 @@
 | Página | `2033836416865143` |
 | Formulário | `1969971681038634` |
 | Otimização | `LEAD_GENERATION`, destino `ON_AD`, cobrança `IMPRESSIONS` |
-| Público | Brasil inteiro (decisão A), pessoas que moram no local, **homens, 22 a 65+**, Advantage+ Audience ligado |
-| Conjunto 1 | `SUDESTE \| HOMENS \| 22+ \| AMPLO ADVANTAGE+ [RESTRINGIR ESTADOS ANTES DE ATIVAR]`, R$ 30/dia (`daily_budget` 3000) |
-| Conjunto 2 | `SUL+CENTRO-OESTE \| HOMENS \| 22+ \| AMPLO ADVANTAGE+ [RESTRINGIR ESTADOS ANTES DE ATIVAR]`, R$ 20/dia (`daily_budget` 2000) |
+| Público | Brasil inteiro (decisão A), pessoas que moram no local, **todos os gêneros, 22 a 65+**, Advantage+ Audience **ligado**, sem interesses (decisão de 2026-10-24, após a pesquisa) |
+| Conjunto 1 | `SUDESTE \| TODOS \| 22+ \| AMPLO ADVANTAGE+ [RESTRINGIR ESTADOS ANTES DE ATIVAR]`, R$ 30/dia (`daily_budget` 3000) |
+| Conjunto 2 | `SUL+CENTRO-OESTE \| TODOS \| 22+ \| AMPLO ADVANTAGE+ [RESTRINGIR ESTADOS ANTES DE ATIVAR]`, R$ 20/dia (`daily_budget` 2000) |
 
-**Pesquisa de público feita em 2026-10-24: ver `pesquisa-publico.md`.** Recomendação: **todos os gêneros**, 22 a 65+, Advantage+ ligado, sem interesses. O cliente ainda não decidiu; os conjuntos acima estão com “homens” como pediu.
+**Decisão de público (2026-10-24):** seguir a recomendação de `pesquisa-publico.md`: todos os gêneros, 22 a 65+, Advantage+ ligado, sem interesses. **Targeting a usar:** `{"geo_locations":{"countries":["BR"],"location_types":["home"]},"age_min":22,"age_max":65}` (sem o campo `genders`).
 
-**Atenção sobre gênero.** Com Advantage+ Audience ligado, “homens” e a idade máxima são **sugestões** para a Meta, não limites rígidos. Para forçar apenas homens, o Advantage+ Audience precisa ser desligado, o que o cliente ainda não pediu. Decidir com o cliente.
+**Se o cliente voltar a querer só homens:** adicionar `"genders":[1]`; com o Advantage+ ligado isso é só sugestão. Para forçar, desligar o Advantage+ Audience e aceitar o menor alcance (cerca de 45% dos usuários da Meta no Brasil).
 
 **Regra do cliente:** depois de criados, **ele restringe os estados no Gerenciador antes de ativar**: Sudeste = SP, RJ, MG, ES; Sul + Centro-Oeste = PR, SC, RS, MT, MS, GO, DF. Até lá, ambos alcançam o país todo.
 

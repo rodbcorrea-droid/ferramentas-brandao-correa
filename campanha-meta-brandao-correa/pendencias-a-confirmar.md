@@ -8,7 +8,7 @@ Legenda: ✅ decidido/fornecido pelo cliente · ⏳ aberto · ⚠️ decidido, m
 
 | # | Pendência | Estado | Nota |
 |---|---|---|---|
-| 1 | Categoria especial de anúncio e público “homens, 22+” | ✅ Decidido | Cliente decidiu prosseguir. Se a Meta bloquear gênero ou idade, usar o permitido, registrar e avisar. Não contornar. **Ao criar a campanha, a declaração de categoria especial é escolha do anunciante e não pode ser desfeita depois de criada**; confirmar a escolha antes de criar. |
+| 1 | Categoria especial de anúncio e público | ✅ Decidido | **Público (2026-10-24): todos os gêneros, 22 a 65+, Advantage+ ligado, sem interesses**, seguindo a pesquisa (`pesquisa-publico.md`); substitui “homens, 22+”. Se a Meta restringir algo na configuração, usar o permitido, registrar e avisar. Não contornar. **Ao criar a campanha, a declaração de categoria especial é escolha do anunciante e não pode ser desfeita depois de criada**; a campanha atual foi criada **sem** categoria. |
 | 2 | Regras de publicidade da OAB | ✅ Revisado pelo cliente | Este pacote não verificou a revisão. |
 | 3 | Landing page | ⚠️ URL informada, conteúdo **não verificado** | `https://acidentesinss.bitrix24.site/jurosfinan/`. O ambiente do pacote não abre `bitrix24.site`. **Domínio `acidentesinss` difere do `inssacidentes` usado no repositório: confirmar a URL.** |
 | 4 | Política de privacidade | ⚠️ URL informada, conteúdo **não verificado** | `https://brandaocorrea.bitrix24.site/politica/`. Conferir que abre e cobre esta finalidade. |

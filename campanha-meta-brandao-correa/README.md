@@ -10,7 +10,7 @@
 
 | Tema | Decisão |
 |---|---|
-| Público | Prosseguir com **homens, 22+**, mesmo havendo risco de a Meta restringir gênero e idade. Se a restrição aparecer na configuração, usar o que a Meta permitir e registrar. **Não contornar.** |
+| Público | **Todos os gêneros, 22 a 65+, Advantage+ ligado, sem interesses** (decisão de 2026-10-24, após a pesquisa em `pesquisa-publico.md`; substitui a escolha inicial de homens 22+). A Meta pode restringir gênero e idade conforme a categoria do anúncio; se aparecer restrição na configuração, usar o que for permitido e registrar. **Não contornar.** |
 | Regras da OAB | Revisadas pelo cliente. Este pacote não verificou essa revisão. |
 | Landing page | `https://acidentesinss.bitrix24.site/jurosfinan/` (substitui a `.../2684/` do briefing original) |
 | Política de privacidade | `https://brandaocorrea.bitrix24.site/politica/` |
@@ -62,7 +62,7 @@ Gerar leads qualificados por **formulário nativo** do Meta Ads, com triagem ini
 
 ## 2. Público
 
-Configuração inicial solicitada: **homens, a partir de 22 anos (22 a 65+)**, que moram nas regiões escolhidas. Contratos em andamento e quitados. Detalhes, sugestões de interesses e testes em `estrategia-publicos.md`.
+Configuração decidida em 2026-10-24: **todos os gêneros, 22 a 65+**, pessoas que moram nas regiões escolhidas, Advantage+ ligado, sem interesses (a escolha inicial era “homens, 22+”). Contratos em andamento e quitados. Detalhes e a pesquisa que sustenta a mudança em `pesquisa-publico.md` e `estrategia-publicos.md`.
 
 Observação: a configuração por gênero e idade pode **não estar disponível** se a Meta exigir categoria especial de anúncio para esta campanha. O cliente decidiu prosseguir mesmo assim; ver `conformidade/checklist-meta.md`.
 
