@@ -23,24 +23,24 @@ Itens ✅ valem para o **texto do pacote**. Eles precisam ser revistos de novo s
 - [ ] ⏳ **PENDENTE** Pergunta sobre quitação revisada.
 - [ ] ⏳ **PENDENTE** Pergunta sobre parcelas revisada.
 - [ ] ⏳ **PENDENTE** Política de privacidade preenchida. (URL informada: `https://brandaocorrea.bitrix24.site/politica/`; falta inserir no formulário e conferir que abre.)
-- [ ] ⏳ **PENDENTE** Landing page testada. (`https://acidentesinss.bitrix24.site/jurosfinan/` não foi verificada; confirmar o domínio, que difere do `inssacidentes` usado no repositório.)
+- [ ] 🚫 **REPROVADA NA REVISÃO** Landing page testada. Revisada em 2026-10-24: 3 itens bloqueantes (`conformidade/revisao-materiais-2026-10-24.md`). Reprovada. (`https://acidentesinss.bitrix24.site/jurosfinan/` não foi verificada; confirmar o domínio, que difere do `inssacidentes` usado no repositório.)
 - [ ] ⏳ **PENDENTE** Formulário testado em modo de prévia.
 - [ ] ⏳ **PENDENTE** Leads serão recebidos corretamente. (Integração com o Bitrix24 a definir.)
 
 ## Criativos
 
-- [ ] ⏳ **PENDENTE** Criativos manuais inseridos. (Nenhum foi produzido.)
-- [ ] ⏳ **PENDENTE** Versões 9:16, 4:5 e 1:1 revisadas.
+- [ ] ⏳ **PENDENTE** Criativos manuais inseridos. (4 criativos recebidos e revisados; nenhum enviado ao Meta; nenhum pronto para envio.)
+- [ ] ⚠️ **ATENÇÃO** Versões 9:16, 4:5 e 1:1 revisadas. Nenhuma versão 1:1 recebida; só o criativo B está em 4:5.
 - [ ] ⏳ **PENDENTE** Legendas revisadas.
-- [ ] ⏳ **PENDENTE** Aviso jurídico revisado.
+- [ ] ⚠️ **ATENÇÃO** Aviso jurídico revisado. Criativos C e D **não têm aviso**; no A o aviso está na faixa inferior coberta pela interface.
 
 ## Conformidade do conteúdo
 
-- [x] ✅ Nenhuma promessa de resultado. (Varredura de frases proibidas: sem ocorrências nas copies, roteiros e especificações.)
+- [ ] ⚠️ **ATENÇÃO** Nenhuma promessa de resultado. ✅ nas copies, roteiros e especificações do pacote (varredura sem ocorrências). ⚠️ **Na landing do cliente não**: o quiz termina em “Seu contrato pode ter direito à Revisão e Restituição!” para todas as respostas (L3) e o texto diz “entendimento pacificado” (L4).
 - [x] ✅ Nenhuma taxa fictícia.
 - [x] ✅ Nenhum percentual inventado. (Sem números seguidos de “%” nos materiais.)
-- [x] ✅ Nenhum depoimento inventado.
-- [x] ✅ Nenhum dado pessoal exposto. (Sem OAB, endereço, telefone ou documento nos materiais.)
+- [ ] ⚠️ **ATENÇÃO** Nenhum depoimento inventado. ✅ no pacote. ⚠️ **A landing do cliente tem 3 depoimentos com 5 estrelas** (L2). Confirmar se são reais e autorizados; mesmo assim, recomendo remover.
+- [x] ✅ Nenhum dado pessoal exposto. (Pacote sem OAB, endereço, telefone ou documento. Observação: a landing do cliente exibe “OAB/MT 16.113”; este pacote não a copiou nem validou.)
 - [x] ✅ Nenhuma imagem sensacionalista. (Nenhuma imagem foi criada; as especificações proíbem o tipo.)
 - [ ] ⚠️ **ATENÇÃO** Nenhuma frase que implique conhecimento da situação financeira da conta. As copies **P01** e **P11** abrem com pergunta dirigida à pessoa (“Financiou carro ou moto?”, “Você sabe qual era a taxa média…”). P01 contém a mensagem central do briefing. Revisar contra a política de atributos pessoais ou usar as versões impessoais (`dados/copies.csv`, coluna `atencao_atributos_pessoais`).
 
@@ -54,8 +54,9 @@ Itens ✅ valem para o **texto do pacote**. Eles precisam ser revistos de novo s
 
 | Situação | Itens |
 |---|---|
-| ✅ Atendidos | 8 |
-| ⚠️ Atenção | 1 |
-| ⏳ Pendentes | 20 |
+| ✅ Atendidos | 6 |
+| ⚠️ Atenção | 5 |
+| 🚫 Reprovado na revisão | 1 (landing page) |
+| ⏳ Pendentes | 17 |
 
 **Os itens pendentes bloqueiam a publicação.** Os bloqueantes de decisão estão em `pendencias-a-confirmar.md` (itens 1 a 5).

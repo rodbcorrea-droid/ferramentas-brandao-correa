@@ -31,14 +31,18 @@ Acesso autorizado pelo cliente. Foi feita **somente leitura**: nada foi criado, 
 
 **Ainda não verificado:** as duas páginas (landing e política) não puderam ser abertas a partir do ambiente em que o pacote foi montado (domínio bloqueado pela rede). O domínio da landing, `acidentesinss`, difere do domínio `inssacidentes` usado em todos os documentos do repositório. **Confirmar que a URL está correta** (pode ser outro site ou erro de digitação).
 
-## Como enviar os criativos e a landing page já prontos
+## Materiais recebidos e revisados (2026-10-24)
 
-Os arquivos que você mostrou (PNGs `criativo1_taxas`, `criativo2_quitado`, `criativo3_escondidas`, em 1:1 e 9:16, e `landing-revisao-veiculos.html`) estão no seu computador. **Este ambiente não os alcança.** Duas formas:
+Foram recebidos 5 imagens (4 distintas) e o HTML da landing. Estão em `materiais-finais/`; a revisão completa está em `conformidade/revisao-materiais-2026-10-24.md`.
 
-1. **Pelo chat:** arraste os PNGs e o HTML para a conversa. Eu consigo ver imagens e ler o HTML.
-2. **Pelo repositório:** copie os arquivos para `campanha-meta-brandao-correa/materiais-finais/` e envie para a branch `claude/mcp-meta-ads-analysis-d488zv`.
+| Material | Veredito |
+|---|---|
+| Landing page | **Reprovada**: 3 problemas bloqueantes (afirmação “você pode ter pago juros abusivos”, depoimentos com estrelas, quiz que dá o mesmo resultado positivo a todos) |
+| Criativo B (4:5) | Quase pronto |
+| Criativo A (9:16) | Aprovável após reposicionar logotipo e aviso |
+| Criativos C e D (9:16) | **Não publicar**: sem aviso jurídico |
 
-Com os arquivos, eu reviso cada peça e a landing contra `conformidade/` antes de qualquer envio para o Meta. O upload de imagens ao Meta e a criação de anúncios só acontecem depois dessa revisão e da sua confirmação.
+**Não recebidos:** versões 1:1 e o criativo “escondidas”. Nada foi enviado ao Meta.
 
 ---
 

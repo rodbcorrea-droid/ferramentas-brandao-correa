@@ -15,7 +15,7 @@ Legenda: ✅ decidido/fornecido pelo cliente · ⏳ aberto · ⚠️ decidido, m
 | 5 | Conta, Página e Instagram | ✅ Definidos | Conta `1155384176705579`; Página `2033836416865143`; Instagram `@brandaocorrea.adv` (`17841407573996167`). |
 | 5a | **Termos de lead ads da Página** | 🚫 **Não aceitos (segundo a API)** | Aceitar em https://www.facebook.com/legal/leadgen/tos. Sem isso o conjunto de anúncios de leads não é criado. Se já foi aceito por outro usuário, confirmar no Gerenciador de Anúncios. |
 | 5b | **Pixel no site** | ⏳ Inexistente na conta | Só há dataset de WhatsApp. Instalar um pixel na landing page se quiser *Landing page views*, remarketing por visita e eventos de site. |
-| 5c | Criativos prontos do cliente | ⏳ Fora do alcance | Há PNGs e um HTML de landing na pasta local do cliente (`CLAUDE CODE META ADS`). **Não estão no repositório nem neste ambiente.** Precisam ser enviados (ver README). Não foram revisados. |
+| 5c | Criativos e landing prontos do cliente | ⚠️ Recebidos e **revisados** | 4 criativos distintos e o HTML da landing, em `materiais-finais/`. **Landing reprovada; criativos C e D sem aviso jurídico.** Ver `conformidade/revisao-materiais-2026-10-24.md`. Ainda não recebidos: versões 1:1 e o criativo “escondidas”. |
 
 ## Antes de produzir/usar os criativos
 
@@ -27,7 +27,9 @@ Legenda: ✅ decidido/fornecido pelo cliente · ⏳ aberto · ⚠️ decidido, m
 | 9 | Identificação profissional a exibir nas artes, se exigida pela revisão já feita |
 | 10 | Trilha sonora licenciada |
 | 11 | Escolha dos criativos da fase 1 |
-| 11a | **Revisar os criativos já prontos** contra `conformidade/` antes de subir (um dos arquivos se chama “escondidas”; o nome sugere um apelo que o briefing proíbe, mas o conteúdo não foi visto) |
+| 11a | Criativos já prontos: **revisados** (ver relatório). Pendente: corrigir C e D (aviso, zonas seguras), A (logotipo e aviso fora da faixa inferior), logotipo oficial em todas as peças, grafia única da marca (Correa × Corrêa), versões 1:1 e 4:5 faltantes. O criativo “escondidas” **continua não revisado** |
+| 11b | **Landing page: corrigir antes de qualquer envio** os itens L1 a L3 (bloqueantes), depois L4 a L9. Inclui link da política de privacidade, pixel com evento `Lead` e alinhamento do alcance geográfico |
+| 11c | **Perguntas para o advogado responsável:** depoimentos, alegações de jurisprudência (“pacificado”, “consolidada”), uso de “especializada”, e inscrição suplementar fora de MT, dado o alcance nacional da campanha |
 
 ## Antes de publicar
 
