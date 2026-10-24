@@ -24,12 +24,13 @@ Legenda: ✅ decidido/fornecido pelo cliente · ⏳ aberto · ⚠️ decidido, m
 | 6 | Logotipo oficial (arquivo) |
 | 7 | Manual de marca (cores e fontes oficiais) |
 | 8 | Apresentador(a) e autorização de imagem e voz |
-| 9 | Identificação profissional a exibir nas artes, se exigida pela revisão já feita |
+| 9 | ✅ Identificação: cliente autorizou `OAB/MT 16.113` nas artes (2026-10-24). Pendente: confirmar se deve vir com o nome do advogado responsável |
 | 10 | Trilha sonora licenciada |
 | 11 | Escolha dos criativos da fase 1 |
 | 11a | Criativos já prontos: **revisados** (ver relatório). Pendente: corrigir C e D (aviso, zonas seguras), A (logotipo e aviso fora da faixa inferior), logotipo oficial em todas as peças, grafia única da marca (Correa × Corrêa), versões 1:1 e 4:5 faltantes. O criativo “escondidas” **continua não revisado** |
-| 11b | **Landing page: corrigir antes de qualquer envio** os itens L1 a L3 (bloqueantes), depois L4 a L9. Inclui link da política de privacidade, pixel com evento `Lead` e alinhamento do alcance geográfico |
-| 11c | **Perguntas para o advogado responsável:** depoimentos, alegações de jurisprudência (“pacificado”, “consolidada”), uso de “especializada”, e inscrição suplementar fora de MT, dado o alcance nacional da campanha |
+| 11b | **Landing page:** versão corrigida proposta em `materiais-finais/landing-revisao-veiculos_corrigida.html` (L1, L3, L4, L5, L6, L9, L10, L13 resolvidos no HTML). **Pendentes:** advogado aprovar o texto novo; publicar no Bitrix24; instalar pixel e evento `Lead` (L7); alcance geográfico (L8); revisar o vídeo (L11); grafia da marca (L12). Ver `materiais-finais/landing-alteracoes.md` |
+| 11c | **Perguntas para o advogado responsável:** (a) depoimentos: o cliente informa que são reais e autorizados, mas **[Provável]** a norma de publicidade os veda e eles descrevem desfechos; ficam **fora** da versão corrigida até confirmação por escrito; (b) texto novo da landing, no lugar de “pacificado”/“consolidada”; (c) “Atuação em…” no lugar de “especializada”; (d) inscrição suplementar fora de MT, dado o alcance nacional da campanha |
+| 11d | **Peças:** correções por peça em `materiais-finais/correcoes-criativos.md` (aviso, OAB, zonas seguras, perguntas impessoais, barras de E/F, CTA, formatos faltantes) |
 
 ## Antes de publicar
 

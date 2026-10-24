@@ -7,7 +7,7 @@ Oito peças. Cada uma é entregue nos formatos **1:1, 4:5 e 9:16**. Nada foi cri
 - **Cores:** Azul-marinho (sugestão #0B1F3A) como cor base; azul profundo (sugestão #123A7A) para blocos e gradientes; branco (#FFFFFF) para texto; dourado/amarelo (sugestão #C9A227) apenas em destaques e no CTA. Os códigos são sugestões: substituir pelos oficiais do manual de marca (a confirmar).
 - **Tipografia:** Sans-serif geométrica e legível (sugestão: Montserrat ou Poppins; usar a fonte oficial da marca, se houver — a confirmar). Título em peso Bold/ExtraBold; apoio em Regular/Medium. Tamanho mínimo do texto de apoio: 36 px em 1080 px de largura.
 - **Logotipo:** Reservar espaço fixo para o logotipo oficial (arquivo a ser fornecido pelo cliente), no canto superior esquerdo (1:1 e 4:5) ou na faixa inferior segura (9:16). Não criar nem redesenhar logotipo.
-- **Identificação profissional:** Se a regra de publicidade exigir identificação profissional, usar o campo [identificação profissional / OAB — a confirmar]. Não inventar número.
+- **Identificação profissional:** OAB/MT 16.113, no rodapé, junto do logotipo, dentro da zona segura (uso autorizado pelo cliente em 2026-10-24; não usar outro número). Recomenda-se acompanhar do nome do advogado responsável (a confirmar).
 - **Aviso jurídico curto (obrigatório em todas as peças):** “Análise individual. Não há promessa de resultado.”
 - **Proibido:** novo logotipo, nome da marca alterado, OAB/endereço/telefone inventados, depoimentos, resultados, taxas ou percentuais, brasões oficiais, símbolos de decisão judicial favorável, tribunal dramático, pessoas chorando ou desesperadas, dinheiro voando, banco em chamas, aparência de anúncio governamental.
 

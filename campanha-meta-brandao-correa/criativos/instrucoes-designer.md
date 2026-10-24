@@ -16,7 +16,7 @@
 ## 3. O que não fazer
 
 - Não criar novo logotipo nem alterar o nome da marca.
-- Não inventar número de OAB, endereço, telefone, depoimento ou resultado financeiro.
+- Não inventar endereço, telefone, depoimento ou resultado financeiro. **OAB: usar somente `OAB/MT 16.113`** (autorizado pelo cliente em 2026-10-24); não usar outro número.
 - Não colocar taxas, percentuais ou valores (mesmo “de exemplo”).
 - Não usar brasões, símbolos de decisão judicial favorável, tribunal dramático ou martelo.
 - Não mostrar pessoas chorando ou desesperadas, dinheiro voando ou banco em chamas.

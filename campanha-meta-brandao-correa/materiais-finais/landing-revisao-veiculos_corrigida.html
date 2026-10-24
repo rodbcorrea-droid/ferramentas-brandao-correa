@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Financiamento de Veículos | Brandão Corrêa Assessoria Jurídica</title>
+    <meta name="description" content="Financiou carro ou moto? As taxas, o prazo e as condições do contrato podem ser analisados e comparados com a média de mercado divulgada pelo Banco Central. Solicite uma análise inicial. Não há promessa de resultado.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <style>
+    :root {
+        --green: #16a34a;
+        --green-dark: #15803d;
+        --green-light: #dcfce7;
+        --blue: #1d4ed8;
+        --blue-dark: #1e3a8a;
+        --yellow: #f59e0b;
+        --red: #dc2626;
+        --dark: #0f172a;
+        --gray: #64748b;
+        --border: #e2e8f0;
+        --bg: #f8fafc;
+        --white: #ffffff;
+        --radius: 16px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: 'Inter', sans-serif;
+        background: var(--bg);
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ── TOP INFO BAR ── */
+    #info-bar {
+        background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
+        background-size: 200% 100%;
+        
+        color: #fff;
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        position: fixed;
+        top: 0; width: 100%;
+        z-index: 1010;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    #info-bar .pulse-dot {
+        display: inline-block;
+        width: 8px; height: 8px;
+        background: #fbbf24;
+        border-radius: 50%;
+        margin-right: 6px;
+        animation: dotPulse 1.2s ease-in-out infinite;
+        vertical-align: middle;
+    }
+    @keyframes barMove { 0%{background-position:0% 0%} 100%{background-position:200% 0%} }
+    @keyframes dotPulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:0.7} }
+
+    /* ── HEADER ── */
+    header {
+        position: fixed;
+        top: 38px; width: 100%;
+        z-index: 1000;
+        background: rgba(255,255,255,0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 12px 0;
+        transition: box-shadow 0.3s;
+    }
+    header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .header-inner {
+        max-width: 1000px; margin: 0 auto;
+        padding: 0 20px;
+        display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo-img { font-weight: 900; font-size: 1.35rem; color: var(--blue-dark); letter-spacing: -0.5px; }
+    .logo-sub { font-size: 0.75rem; font-weight: 600; color: var(--gray); display: block; line-height: 1; margin-top: 2px; }
+    .header-oab { font-size: 0.78rem; font-weight: 700; color: var(--blue-dark); background: #eff6ff; padding: 6px 14px; border-radius: 50px; border: 1px solid #bfdbfe; }
+
+    /* ── HERO ── */
+    .hero {
+        padding: 145px 0 70px;
+        background: linear-gradient(160deg, #eff6ff 0%, #f0fdf4 40%, #fff 100%);
+        position: relative; overflow: hidden;
+        text-align: center;
+    }
+    .hero::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231d4ed8' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+    .hero .container { max-width: 860px; margin: 0 auto; padding: 0 20px; position: relative; }
+
+    .hero-eyebrow {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: #fff; border: 1.5px solid #bfdbfe;
+        color: var(--blue-dark); padding: 7px 18px; border-radius: 50px;
+        font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px;
+        text-transform: uppercase; margin-bottom: 24px;
+        box-shadow: 0 2px 8px rgba(29,78,216,0.08);
+    }
+
+    .hero h1 {
+        font-size: clamp(1.85rem, 5vw, 3rem);
+        font-weight: 900; line-height: 1.14;
+        color: var(--dark); margin-bottom: 20px;
+        letter-spacing: -1px;
+    }
+    .hero h1 em {
+        font-style: normal;
+        background: linear-gradient(135deg, #15803d, #16a34a, #22c55e);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .hero h1 u {
+        text-decoration: none;
+        background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero-sub {
+        font-size: 1.08rem; color: var(--gray);
+        max-width: 700px; margin: 0 auto 32px;
+        font-weight: 400; line-height: 1.7;
+    }
+    .hero-sub strong { color: var(--dark); font-weight: 700; }
+
+    /* Pills */
+    .pills {
+        display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+        margin-bottom: 36px;
+    }
+    .pill {
+        background: var(--white); border: 1px solid var(--border);
+        padding: 7px 16px; border-radius: 50px;
+        font-size: 0.82rem; font-weight: 600; color: var(--dark);
+        display: flex; align-items: center; gap: 6px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .pill .icon { font-size: 1rem; }
+
+    /* ── VIDEO ── */
+    .video-wrapper {
+        width: 100%; max-width: 780px;
+        margin: 0 auto 36px;
+        background: #000;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 3px solid rgba(255,255,255,0.9);
+        box-shadow: 0 30px 80px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.05);
+        position: relative;
+    }
+    .video-aspect { position: relative; padding-bottom: 56.25%; height: 0; }
+    .video-aspect iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    #unmute-btn {
+        position: absolute; bottom: 16px; left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+        display: flex; align-items: center; gap: 8px;
+        background: rgba(10,10,20,0.82);
+        backdrop-filter: blur(10px);
+        border: 1.5px solid rgba(255,255,255,0.25);
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.88rem; font-weight: 700;
+        padding: 10px 22px; border-radius: 50px;
+        cursor: pointer; white-space: nowrap;
+        
+        transition: all 0.3s ease;
+    }
+    #unmute-btn:hover { background: rgba(29,78,216,0.88); transform: translateX(-50%) scale(1.05); }
+    #unmute-btn.is-unmuted { background: rgba(21,128,61,0.88); animation: none; opacity: 0; pointer-events: none; transition: opacity 0.8s ease 1s; }
+    @keyframes unmutePulse {
+        0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.25); }
+        50% { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+    }
+
+    /* ── CTA HERO ── */
+    .cta-block { text-align: center; }
+    .btn-primary {
+        display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+        background: linear-gradient(135deg, #15803d, #16a34a);
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.05rem; font-weight: 800;
+        padding: 20px 46px;
+        border-radius: 100px;
+        border: none; cursor: pointer;
+        letter-spacing: 0.2px;
+        box-shadow: 0 8px 32px rgba(22,163,74,0.45), 0 0 0 0 rgba(22,163,74,0.6);
+        
+        transition: all 0.25s ease;
+        text-transform: uppercase;
+    }
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 48px rgba(22,163,74,0.55);
+        background: linear-gradient(135deg, #166534, #15803d);
+        animation: none;
+    }
+    .btn-primary .arrow { font-size: 1.3rem; transition: transform 0.2s; }
+    .btn-primary:hover .arrow { transform: translateX(4px); }
+    @keyframes ctaPulse {
+        0%,100% { box-shadow: 0 8px 32px rgba(22,163,74,0.45), 0 0 0 0 rgba(22,163,74,0.5); }
+        60% { box-shadow: 0 8px 32px rgba(22,163,74,0.45), 0 0 0 18px rgba(22,163,74,0); }
+    }
+    .btn-sub {
+        margin-top: 14px;
+        font-size: 0.82rem; color: var(--gray);
+        display: flex; align-items: center; justify-content: center; gap: 16px;
+        flex-wrap: wrap;
+    }
+    .btn-sub span { display: flex; align-items: center; gap: 5px; }
+
+    /* ── SOCIAL PROOF STRIP ── */
+    .proof-strip { background: var(--dark); padding: 24px 0; }
+    .proof-strip-inner {
+        max-width: 1000px; margin: 0 auto; padding: 0 20px;
+        display: flex; align-items: center; justify-content: center;
+        flex-wrap: wrap; gap: 0;
+    }
+    .proof-num {
+        text-align: center; padding: 10px 32px;
+        border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .proof-num:last-child { border-right: none; }
+    .proof-num strong { display: block; font-size: 1.6rem; font-weight: 900; color: #fff; line-height: 1.1; }
+    .proof-num span { font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+
+    /* ── VEHICLE FINANCING DETAILS SECTION ── */
+    .consumer-rights { padding: 80px 0; background: #f8fafc; }
+    .consumer-cards {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px; max-width: 1000px; margin: 40px auto 0; padding: 0 20px;
+    }
+    .c-card {
+        background: #fff; border: 1px solid var(--border);
+        border-radius: 20px; padding: 32px 24px;
+        transition: all 0.3s ease; text-align: left;
+    }
+    .c-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-color: #bfdbfe; }
+    .c-icon { font-size: 2.3rem; margin-bottom: 16px; }
+    .c-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin-bottom: 12px; }
+    .c-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.65; }
+
+    /* ── CALCULATOR / QUIZ ── */
+    .quiz-section { background: #fff; padding: 80px 0; }
+    .section-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+    .section-tag {
+        display: inline-block; background: #eff6ff; color: var(--blue);
+        font-size: 0.72rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+        padding: 5px 14px; border-radius: 50px; margin-bottom: 14px;
+    }
+    .section-title {
+        font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 900; color: var(--dark);
+        line-height: 1.2; letter-spacing: -0.5px;
+    }
+    .section-sub { font-size: 1rem; color: var(--gray); margin-top: 10px; max-width: 580px; }
+
+    .quiz-card {
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        border-radius: 24px; padding: 44px 48px; margin-top: 40px;
+        position: relative; overflow: hidden;
+    }
+    .quiz-card::before {
+        content: ''; position: absolute; top: -80px; right: -80px; width: 300px; height: 300px;
+        background: radial-gradient(circle, rgba(59,130,246,0.2), transparent 70%); pointer-events: none;
+    }
+    .quiz-step { position: relative; z-index: 1; }
+    .quiz-step-label {
+        font-size: 0.75rem; font-weight: 700; color: #93c5fd; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
+        display: flex; align-items: center; gap: 8px;
+    }
+    .quiz-q { font-size: clamp(1.1rem, 3vw, 1.45rem); font-weight: 800; color: #fff; margin-bottom: 24px; line-height: 1.35; }
+    .quiz-options { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    .quiz-opt {
+        background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.15);
+        color: #e2e8f0; font-size: 0.95rem; font-weight: 600; padding: 16px 20px; border-radius: 14px;
+        cursor: pointer; text-align: left; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;
+    }
+    .quiz-opt:hover, .quiz-opt.selected { background: rgba(22,163,74,0.25); border-color: #4ade80; color: #fff; transform: scale(1.01); }
+    
+    /* RESULT */
+    #quiz-result { display: none; position: relative; z-index: 1; }
+    .result-header { text-align: center; margin-bottom: 28px; }
+    .result-badge {
+        display: inline-flex; align-items: center; gap: 8px; background: rgba(22,163,74,0.25); border: 1.5px solid #4ade80;
+        color: #86efac; padding: 8px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 16px;
+    }
+    .result-value { font-size: clamp(1.6rem, 4vw, 2.3rem); font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 8px; }
+    .result-value span { color: #4ade80; }
+    .btn-result {
+        width: 100%; max-width: 420px; background: linear-gradient(135deg, #15803d, #16a34a);
+        color: #fff; font-size: 1rem; font-weight: 800; padding: 18px 32px; border-radius: 100px; border: none; cursor: pointer;
+        box-shadow: 0 8px 32px rgba(22,163,74,0.5); text-transform: uppercase; transition: all 0.25s; margin-top:20px;
+    }
+    .btn-result:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(22,163,74,0.6); }
+    .quiz-progress { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-bottom: 28px; position: relative; z-index: 1; }
+    .quiz-progress-bar { height: 100%; background: linear-gradient(90deg, #4ade80, #22c55e); border-radius: 2px; transition: width 0.4s ease; }
+
+    /* ── AUTHORITY / LEGAL BASIS SECTION ── */
+    .guarantee-section {
+        padding: 80px 0; background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
+        position: relative; overflow: hidden;
+    }
+    .guarantee-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width:1000px; margin: 0 auto; padding: 0 20px;}
+    .guarantee-text h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 18px; }
+    .guarantee-text p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.75; margin-bottom: 20px; }
+    .guarantee-visual { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; padding: 40px; text-align: center; }
+    .shield-icon { font-size: 3.8rem; margin-bottom: 16px; }
+    .guarantee-visual h3 { font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .guarantee-visual p { font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 20px; }
+
+    /* ── FAQ ── */
+    .faq-item.open .faq-a { max-height: 500px !important; opacity: 1 !important; padding-bottom: 22px !important; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-item.open .faq-q { color: var(--blue) !important; }
+
+    /* ── MODAL BITRIX24 ── */
+    .modal-overlay {
+        position: fixed; inset: 0; background: rgba(10,10,20,0.88); z-index: 2000; display: flex; align-items: center; justify-content: center;
+        padding: 16px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; backdrop-filter: blur(8px);
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-box {
+        background: #fff; border-radius: 24px; width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto;
+        position: relative; transform: translateY(40px) scale(0.96); transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .modal-overlay.open .modal-box { transform: translateY(0) scale(1); }
+    .modal-head {
+        position: sticky; top: 0; background: var(--dark); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; z-index: 2; border-radius: 24px 24px 0 0;
+    }
+    .modal-head h3 { color: #fff; font-size: 1rem; font-weight: 700; }
+    .modal-close { background: rgba(255,255,255,0.1); border: none; color: #fff; width: 34px; height: 34px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .modal-close:hover { background: rgba(255,255,255,0.2); transform: rotate(90deg); }
+    .modal-body { padding: 24px 20px 32px; }
+    .b24-form-container { min-height: 200px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+        .hero { padding: 125px 0 60px; }
+        .quiz-card { padding: 28px 20px; }
+        .guarantee-grid { grid-template-columns: 1fr; }
+        .guarantee-visual { order: -1; }
+        .modal-box { height: 100%; border-radius: 0; }
+        .proof-num { padding: 10px 18px; width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    }
+    </style>
+<!-- PIXEL: inserir aqui o código-base do Meta Pixel quando existir um dataset de site na conta (ID a definir).
+     Sem o código-base, as chamadas fbq() abaixo não registram nada. -->
+</head>
+<body>
+
+<!-- ░░ INFORMATIVO TOP BAR ░░ -->
+<div id="info-bar">
+    <span id="bar-text">⚖️ Conteúdo informativo. A análise depende do contrato, da documentação e das circunstâncias de cada caso.</span>
+</div>
+
+<!-- ░░ HEADER ░░ -->
+<header id="header">
+    <div class="header-inner">
+        <div>
+            <div class="logo-img">Brandão Corrêa</div>
+            <span class="logo-sub">Assessoria Jurídica</span>
+        </div>
+        <div class="header-oab">OAB/MT 16.113</div>
+    </div>
+</header>
+
+<!-- ░░ HERO ░░ -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-eyebrow">
+            🚗🏍️ Direito Bancário e Análise Contratual
+        </div>
+
+        <h1>
+            Financiou Carro ou Moto?<br>
+            <em>A taxa do contrato</em><br>
+            <u>pode ser analisada.</u>
+        </h1>
+
+        <p class="hero-sub">
+            As taxas, o prazo e as condições do contrato podem ser analisados e comparados com a média de mercado divulgada pelo <strong>Banco Central</strong>, conforme o período e as circunstâncias da contratação. <strong>Superar a média, isoladamente, não comprova abusividade:</strong> cada caso depende do contrato e da documentação.
+        </p>
+
+        <div class="pills">
+            <div class="pill"><span class="icon">📑</span> Contratos em andamento ou quitados</div>
+            <div class="pill"><span class="icon">🔍</span> Comparação com a média do Banco Central</div>
+            <div class="pill"><span class="icon">📋</span> Análise inicial das informações</div>
+            <div class="pill"><span class="icon">📱</span> Atendimento 100% digital</div>
+        </div>
+
+        <!-- VIDEO: conteúdo do vídeo NÃO foi revisado. Revisar antes de publicar. -->
+        <div class="video-wrapper">
+            <div class="video-aspect">
+                <iframe
+                    id="vimeo-player"
+                    src="https://player.vimeo.com/video/1224326477?autoplay=1&muted=1&controls=0&loop=0&title=0&byline=0&portrait=0&dnt=1"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <button id="unmute-btn" onclick="unmuteVideo()" aria-label="Ativar som">
+                <svg id="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+                </svg>
+                <svg id="icon-unmuted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                </svg>
+                <span id="unmute-label">🔇 Toque para ouvir a explicação</span>
+            </button>
+        </div>
+
+        <div class="cta-block">
+            <button onclick="openModal()" class="btn-primary">
+                Solicitar Análise Inicial
+                <span class="arrow">→</span>
+            </button>
+            <p style="margin-top:14px;font-size:0.78rem;color:var(--gray);max-width:560px;margin-left:auto;margin-right:auto;">A análise depende do contrato, da documentação e das circunstâncias de cada caso. O preenchimento do formulário não garante resultado ou contratação.</p>
+            <div class="btn-sub">
+                <span>🔒 Sigilo profissional</span>
+                <span>⚖️ OAB/MT 16.113</span>
+                <span>📲 Envio simples pelo celular</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ FAIXA INFORMATIVA ░░ -->
+<div class="proof-strip">
+    <div class="proof-strip-inner">
+        <div class="proof-num"><strong>Taxa</strong><span>Comparada com a média do período</span></div>
+        <div class="proof-num"><strong>Prazo e parcelas</strong><span>Observados no contrato</span></div>
+        <div class="proof-num"><strong>Análise individual</strong><span>Conforme a documentação</span></div>
+        <div class="proof-num"><strong>100% digital</strong><span>Atendimento online</span></div>
+    </div>
+</div>
+
+<!-- ░░ O QUE ANALISAMOS ░░ -->
+<section class="consumer-rights">
+    <div class="section-wrap" style="text-align: center;">
+        <span class="section-tag">Direito Bancário</span>
+        <h2 class="section-title">O Que Pode Ser Observado no Financiamento?</h2>
+        <p class="section-sub" style="margin: 10px auto 0;">A análise inicial considera o que consta do contrato de financiamento de carro ou moto. Estes são os pontos de partida:</p>
+    </div>
+    <div class="consumer-cards">
+        <div class="c-card">
+            <div class="c-icon">📈</div>
+            <h3>Taxa de juros e média de mercado</h3>
+            <p>O Banco Central divulga taxas médias de mercado por período. A taxa prevista no contrato pode ser comparada com essa referência. Superar a média, isoladamente, não comprova abusividade.</p>
+        </div>
+        <div class="c-card">
+            <div class="c-icon">📑</div>
+            <h3>Seguros, tarifas e encargos</h3>
+            <p>O contrato pode prever seguros, tarifas e encargos. A análise verifica o que consta do documento e como foi informado, conforme as circunstâncias da contratação.</p>
+        </div>
+        <div class="c-card">
+            <div class="c-icon">✅</div>
+            <h3>Contratos quitados ou em andamento</h3>
+            <p>Contratos quitados e em andamento podem ser analisados, conforme a documentação. Prazos e cabimento dependem do histórico do contrato.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ TRIAGEM RÁPIDA ░░ -->
+<section class="quiz-section">
+    <div class="section-wrap">
+        <div style="text-align:center; margin-bottom: 0;">
+            <span class="section-tag">Triagem Rápida</span>
+            <h2 class="section-title">Organize as Informações do Seu Contrato</h2>
+            <p class="section-sub" style="margin: 10px auto 0;">Responda 3 perguntas rápidas. Elas ajudam a equipe a entender o ponto de partida. Nenhuma resposta indica ou garante resultado.</p>
+        </div>
+        <div class="quiz-card">
+            <div class="quiz-progress"><div class="quiz-progress-bar" id="progress-bar" style="width:0%"></div></div>
+
+            <div class="quiz-step" id="step-1">
+                <div class="quiz-step-label">Passo 1 de 3</div>
+                <p class="quiz-q">Qual veículo foi financiado?</p>
+                <div class="quiz-options">
+                    <button class="quiz-opt" onclick="nextStep(2, this)">🚗 Carro de passeio ou utilitário</button>
+                    <button class="quiz-opt" onclick="nextStep(2, this)">🏍️ Motocicleta</button>
+                    <button class="quiz-opt" onclick="nextStep(2, this)">🚚 Outro veículo</button>
+                </div>
+            </div>
+
+            <div class="quiz-step" id="step-2" style="display:none">
+                <div class="quiz-step-label">Passo 2 de 3</div>
+                <p class="quiz-q">Qual é a situação atual do contrato?</p>
+                <div class="quiz-options">
+                    <button class="quiz-opt" onclick="nextStep(3, this)">✅ Já está quitado</button>
+                    <button class="quiz-opt" onclick="nextStep(3, this)">📄 Ainda está em andamento</button>
+                    <button class="quiz-opt" onclick="nextStep(3, this)">🙂 Prefiro não informar</button>
+                </div>
+            </div>
+
+            <div class="quiz-step" id="step-3" style="display:none">
+                <div class="quiz-step-label">Passo 3 de 3</div>
+                <p class="quiz-q">O que você tem em mãos agora?</p>
+                <div class="quiz-options">
+                    <button class="quiz-opt" onclick="showResult(this)">📑 O contrato ou uma cópia</button>
+                    <button class="quiz-opt" onclick="showResult(this)">📝 Lembro do banco e das parcelas</button>
+                    <button class="quiz-opt" onclick="showResult(this)">🔍 Não tenho nada em mãos agora</button>
+                </div>
+            </div>
+
+            <div id="quiz-result">
+                <div class="result-header">
+                    <div class="result-badge">✅ Obrigado pelas respostas</div>
+                    <div class="result-value">A equipe pode fazer uma <span>análise inicial</span> das suas informações.</div>
+                    <p class="result-sub" style="color:#cbd5e1; font-size:0.98rem; margin-top:10px;">A análise depende do contrato, da documentação e das circunstâncias do caso. Esta triagem não indica nem garante resultado.</p>
+                </div>
+                <div style="text-align: center;">
+                    <button onclick="openModal()" class="btn-result">Solicitar Análise Inicial</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ COMO FUNCIONA ░░ -->
+<section class="guarantee-section">
+    <div class="section-wrap">
+        <div class="guarantee-grid">
+            <div class="guarantee-text">
+                <div class="gtag" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #e2e8f0; padding: 5px 14px; border-radius: 50px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; margin-bottom: 18px; display: inline-block;">⚖️ Como funciona</div>
+                <h2>Como Funciona a Análise Inicial</h2>
+                <p>A taxa de juros prevista no contrato pode ser comparada com a média de mercado divulgada pelo Banco Central para o período da contratação. Superar a média, isoladamente, não comprova abusividade: é preciso considerar o contrato, a documentação e as circunstâncias da contratação.</p>
+                <p>Seguros, tarifas e encargos também podem ser observados, conforme o que consta do contrato. A assessoria faz uma análise inicial 100% digital das informações enviadas. Essa análise não equivale a uma decisão judicial e não promete resultado.</p>
+            </div>
+            <div class="guarantee-visual">
+                <div class="shield-icon">⚖️</div>
+                <h3>Brandão Corrêa<br>Assessoria Jurídica</h3>
+                <p>Atuação em Direito Bancário e Defesa do Consumidor. Atendimento digital, transparente e seguro.</p>
+                <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #e2e8f0; padding: 10px 20px; border-radius: 12px; font-size: 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
+                    <span>OAB/MT 16.113 • Cuiabá/MT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ░░ O QUE INFORMAR ░░ -->
+<!-- SEÇÃO DE DEPOIMENTOS REMOVIDA. Reinserir somente com confirmação por escrito do advogado responsável de que é permitido
+     (ver materiais-finais/landing-alteracoes.md, item L2). Mesmo que permitido, remover qualquer menção a desfechos ou resultados. -->
+<section class="consumer-rights" style="background:#fff;">
+    <div class="section-wrap" style="text-align: center;">
+        <span class="section-tag">Antes de Solicitar</span>
+        <h2 class="section-title">O Que Ajuda na Análise Inicial</h2>
+        <p class="section-sub" style="margin: 10px auto 0;">Se não tiver todas as informações, envie apenas o que souber.</p>
+    </div>
+    <div class="consumer-cards">
+        <div class="c-card"><div class="c-icon">🚗</div><h3>Veículo</h3><p>Se foi carro ou moto financiado.</p></div>
+        <div class="c-card"><div class="c-icon">🏦</div><h3>Banco ou financeira</h3><p>A instituição que aparece no contrato.</p></div>
+        <div class="c-card"><div class="c-icon">📆</div><h3>Parcelas</h3><p>Quantidade contratada, mesmo que aproximada.</p></div>
+        <div class="c-card"><div class="c-icon">📄</div><h3>Situação do contrato</h3><p>Se já está quitado ou em andamento.</p></div>
+    </div>
+</section>
+
+<!-- ░░ FAQ ESPECÍFICO DE VEÍCULOS ░░ -->
+<section class="faq-section" style="padding: 80px 0; background: #fff;">
+    <div class="section-wrap" style="max-width: 860px; margin: 0 auto; padding: 0 20px;">
+        <div style="text-align:center;">
+            <span class="section-tag" style="display: inline-block; background: #eff6ff; color: var(--blue); font-size: 0.72rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; padding: 5px 14px; border-radius: 50px; margin-bottom: 14px;">Dúvidas Frequentes</span>
+            <h2 class="section-title" style="font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 900; color: var(--dark); line-height: 1.2; letter-spacing: -0.5px;">Perguntas Sobre Financiamento de Veículos</h2>
+        </div>
+        <div class="faq-wrap" style="max-width: 760px; margin: 40px auto 0;">
+            <div class="faq-item" style="background: var(--bg); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s; cursor:pointer;" onclick="this.classList.toggle('open')">
+                <div class="faq-q" style="padding: 22px 24px; font-size: 0.95rem; font-weight: 700; color: var(--dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none;">
+                    <span>O financiamento já foi quitado. Ainda pode ser analisado?</span>
+                    <span class="faq-icon" style="font-size: 1.4rem; color: var(--blue); flex-shrink: 0; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-a" style="padding: 0 24px; font-size: 0.88rem; color: var(--gray); line-height: 1.75; max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s ease;">
+                    <br>A análise de contratos quitados depende da documentação e do histórico do contrato. Prazos e cabimento variam conforme o caso. Informe a situação do contrato e a equipe orienta sobre os próximos passos.
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="faq-item" style="background: var(--bg); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s; cursor:pointer;" onclick="this.classList.toggle('open')">
+                <div class="faq-q" style="padding: 22px 24px; font-size: 0.95rem; font-weight: 700; color: var(--dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none;">
+                    <span>Como a taxa do contrato é comparada com a média do Banco Central?</span>
+                    <span class="faq-icon" style="font-size: 1.4rem; color: var(--blue); flex-shrink: 0; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-a" style="padding: 0 24px; font-size: 0.88rem; color: var(--gray); line-height: 1.75; max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s ease;">
+                    <br>O Banco Central divulga taxas médias de mercado por período. A taxa prevista no contrato pode ser comparada com a média do período da contratação. Superar a média, isoladamente, não comprova abusividade: a análise considera o contrato, a documentação e as circunstâncias.
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="faq-item" style="background: var(--bg); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s; cursor:pointer;" onclick="this.classList.toggle('open')">
+                <div class="faq-q" style="padding: 22px 24px; font-size: 0.95rem; font-weight: 700; color: var(--dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none;">
+                    <span>O que são seguros, tarifas e encargos no financiamento?</span>
+                    <span class="faq-icon" style="font-size: 1.4rem; color: var(--blue); flex-shrink: 0; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-a" style="padding: 0 24px; font-size: 0.88rem; color: var(--gray); line-height: 1.75; max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s ease;">
+                    <br>São itens que podem constar do contrato, como seguros, tarifas e outros encargos. A análise verifica o que está previsto no documento e como foi informado, conforme as circunstâncias da contratação.
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="faq-item" style="background: var(--bg); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s; cursor:pointer;" onclick="this.classList.toggle('open')">
+                <div class="faq-q" style="padding: 22px 24px; font-size: 0.95rem; font-weight: 700; color: var(--dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none;">
+                    <span>Não tenho mais a cópia do contrato. Como faço?</span>
+                    <span class="faq-icon" style="font-size: 1.4rem; color: var(--blue); flex-shrink: 0; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-a" style="padding: 0 24px; font-size: 0.88rem; color: var(--gray); line-height: 1.75; max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s ease;">
+                    <br>Informe o que lembrar, como o banco ou a financeira e a quantidade de parcelas. A equipe orienta sobre como solicitar a segunda via pelos canais da própria instituição financeira.
+                    <br><br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ░░ MODAL FORMULÁRIO BITRIX24 ─── -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+    <div class="modal-box" id="modal-box">
+        <div class="modal-head">
+            <h3>📋 Solicitar Análise Inicial</h3>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body">
+            <p style="text-align:center;color:var(--gray);font-size:0.9rem;margin-bottom:20px;">Preencha seus dados abaixo e a equipe entrará em contato.</p>
+            <p style="text-align:center;color:var(--gray);font-size:0.78rem;margin-bottom:16px;">Usaremos seus dados para analisar as informações do financiamento e entrar em contato sobre a solicitação. Consulte a <a href="https://brandaocorrea.bitrix24.site/politica/" target="_blank" rel="noopener" style="text-decoration:underline;">política de privacidade</a>.</p>
+            <div class="b24-form-container" id="b24-form-root"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ░░ FOOTER ░░ -->
+<footer style="background: var(--dark); color: #94a3b8; text-align: center; padding: 44px 20px; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div style="max-width:700px;margin:0 auto;">
+        <p><strong style="color: #fff; font-weight: 700;">Brandão Corrêa Assessoria Jurídica</strong></p>
+        <p>OAB/MT 16.113 • Cuiabá - Mato Grosso</p>
+        <p style="margin-top:12px;"><a href="https://brandaocorrea.bitrix24.site/politica/" target="_blank" rel="noopener" style="text-decoration:underline;">Política de privacidade</a></p>
+        <p style="margin-top:12px;opacity:0.8;font-size:0.74rem;">© 2026 Brandão Corrêa Assessoria Jurídica. Conteúdo meramente informativo. A análise depende do contrato, da documentação e das circunstâncias de cada caso. O preenchimento do formulário não garante resultado ou contratação. A análise inicial não equivale a decisão judicial.</p>
+    </div>
+</footer>
+
+<script>
+/* ── VIMEO UNMUTE ── */
+var vimeoPlayer = null;
+window.addEventListener('load', function () {
+    var iframe = document.getElementById('vimeo-player');
+    if (typeof Vimeo !== 'undefined' && iframe) vimeoPlayer = new Vimeo.Player(iframe);
+});
+function unmuteVideo() {
+    var btn = document.getElementById('unmute-btn');
+    var label = document.getElementById('unmute-label');
+    var im = document.getElementById('icon-muted');
+    var iu = document.getElementById('icon-unmuted');
+    if (im && iu && label && btn) {
+        im.style.display = 'none'; iu.style.display = 'block';
+        label.textContent = '🔊 Som ativado!';
+        btn.classList.add('is-unmuted');
+    }
+    if (vimeoPlayer) {
+        vimeoPlayer.setVolume(1).then(function(){ return vimeoPlayer.setMuted(false); });
+    }
+}
+
+/* ── QUIZ ── */
+function nextStep(next, btn) {
+    if (btn) { 
+        document.querySelectorAll('#step-'+(next-1)+' .quiz-opt').forEach(function(b){ b.classList.remove('selected'); }); 
+        btn.classList.add('selected'); 
+    }
+    setTimeout(function(){
+        document.getElementById('step-'+(next-1)).style.display = 'none';
+        var el = document.getElementById('step-'+next);
+        if (el) el.style.display = 'block';
+        var pct = ((next-1)/3)*100;
+        document.getElementById('progress-bar').style.width = pct + '%';
+    }, 280);
+}
+function showResult(btn) {
+    if (btn) { btn.classList.add('selected'); }
+    setTimeout(function(){
+        document.getElementById('step-3').style.display = 'none';
+        document.getElementById('progress-bar').style.width = '100%';
+        document.getElementById('quiz-result').style.display = 'block';
+        if (typeof fbq === 'function') { fbq('trackCustom', 'QuizCompleted'); }
+    }, 280);
+}
+
+/* ── MODAL / BITRIX24 FORM ── */
+var b24FormLoaded = false;
+function openModal() {
+    var overlay = document.getElementById('modal-overlay');
+    if (!b24FormLoaded) {
+        loadB24Form();
+        b24FormLoaded = true;
+    }
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (typeof fbq === 'function') { fbq('trackCustom', 'FormularioAberto'); }
+    /* TODO: disparar fbq('track', 'Lead') no ENVIO do formulário Bitrix24 (usar o evento de envio do formulário; confirmar no painel Bitrix24). */
+}
+function loadB24Form() {
+    var root = document.getElementById('b24-form-root');
+    if (!root) return;
+    var script = document.createElement('script');
+    script.setAttribute('data-b24-form', 'inline/117/ih752e');
+    script.setAttribute('data-skip-moving', 'true');
+    script.innerHTML = '(function(w,d,u){var s=d.createElement(\'script\');s.async=true;s.src=u+\'?\'+(Date.now()/180000|0);var h=d.getElementsByTagName(\'script\')[0];h.parentNode.insertBefore(s,h);})(window,document,\'' + 'https://cdn.bitrix24.com.br/b6630127/crm/form/loader_117.js\'' + ');';
+    root.appendChild(script);
+}
+function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+}
+function handleOverlayClick(e) { if (e.target.id === 'modal-overlay') closeModal(); }
+window.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+
+</script>
+</body>
+</html>

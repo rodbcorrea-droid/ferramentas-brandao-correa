@@ -23,7 +23,7 @@ Itens ✅ valem para o **texto do pacote**. Eles precisam ser revistos de novo s
 - [ ] ⏳ **PENDENTE** Pergunta sobre quitação revisada.
 - [ ] ⏳ **PENDENTE** Pergunta sobre parcelas revisada.
 - [ ] ⏳ **PENDENTE** Política de privacidade preenchida. (URL informada: `https://brandaocorrea.bitrix24.site/politica/`; falta inserir no formulário e conferir que abre.)
-- [ ] 🚫 **REPROVADA NA REVISÃO** Landing page testada. Revisada em 2026-10-24: 3 itens bloqueantes (`conformidade/revisao-materiais-2026-10-24.md`). Reprovada. (`https://acidentesinss.bitrix24.site/jurosfinan/` não foi verificada; confirmar o domínio, que difere do `inssacidentes` usado no repositório.)
+- [ ] 🚫 **REPROVADA NA REVISÃO** Landing page testada. Revisada em 2026-10-24: 3 itens bloqueantes (`conformidade/revisao-materiais-2026-10-24.md`). **Versão corrigida proposta** em `materiais-finais/landing-revisao-veiculos_corrigida.html`; ainda precisa de aprovação do advogado, publicação, pixel e evento `Lead`. A página no ar continua reprovada. (`https://acidentesinss.bitrix24.site/jurosfinan/` não foi verificada; confirmar o domínio, que difere do `inssacidentes` usado no repositório.)
 - [ ] ⏳ **PENDENTE** Formulário testado em modo de prévia.
 - [ ] ⏳ **PENDENTE** Leads serão recebidos corretamente. (Integração com o Bitrix24 a definir.)
 

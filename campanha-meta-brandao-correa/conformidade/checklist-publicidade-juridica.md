@@ -27,7 +27,7 @@
 
 ## 3. Identificação
 
-- [ ] Identificação profissional exigida (nome, inscrição na OAB ou da sociedade) **a confirmar**. Não foi inserida nenhuma identificação nos materiais; há campo reservado nas artes.
+- [ ] Identificação profissional: o cliente autorizou o uso de **OAB/MT 16.113** nas artes (2026-10-24). Confirmar o formato exigido e se deve acompanhar o nome do advogado responsável. Nenhum outro número deve ser usado.
 - [ ] A natureza do escritório (sociedade de advogados registrada ou outra) **a confirmar**, porque “Assessoria Jurídica” pode ter implicações de nome e de publicidade.
 - [ ] Endereço, telefone e demais dados institucionais: **não inseridos**. Inserir somente se fornecidos e aprovados.
 

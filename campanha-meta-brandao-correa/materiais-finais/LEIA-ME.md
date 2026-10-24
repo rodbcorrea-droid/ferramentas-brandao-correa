@@ -18,3 +18,11 @@ Recebidos em 2026-10-24 por anexo na conversa. **Não foram modificados.** A rev
 Os nomes originais dos arquivos não são conhecidos; os nomes acima descrevem o conteúdo. O criativo “escondidas” não foi identificado entre as imagens (veja o relatório).
 
 **Não publicar nenhum destes arquivos sem as correções da revisão.**
+
+## Arquivos produzidos a partir da revisão
+
+| Arquivo | O que é |
+|---|---|
+| `landing-revisao-veiculos_corrigida.html` | Proposta de landing corrigida (não publicada) |
+| `landing-alteracoes.md` | O que mudou, o que falta e como foi verificado |
+| `correcoes-criativos.md` | Correções peça por peça para o designer |

@@ -42,6 +42,8 @@ Foram recebidos 5 imagens (4 distintas) e o HTML da landing. Estão em `materiai
 | Criativo A (9:16) | Aprovável após reposicionar logotipo e aviso |
 | Criativos C, D e E/F | **Não publicar**: sem aviso jurídico (E/F também tem pergunta direta sobre o contrato da pessoa) |
 
+**Landing corrigida (proposta):** `materiais-finais/landing-revisao-veiculos_corrigida.html`, com a lista de mudanças em `materiais-finais/landing-alteracoes.md`. Depoimentos ficaram **fora** (ver a nota). **Correções por peça:** `materiais-finais/correcoes-criativos.md`. OAB/MT 16.113 autorizada pelo cliente para as artes.
+
 **2ª remessa:** a landing foi reenviada com conteúdo **idêntico** (mesmo checksum): nenhum item foi corrigido. Chegaram também as peças E (1:1) e F (9:16). Nada foi enviado ao Meta.
 
 ---
