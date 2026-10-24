@@ -17,6 +17,16 @@ Legenda: ✅ decidido/fornecido pelo cliente · ⏳ aberto · ⚠️ decidido, m
 | 5b | **Pixel no site** | ⏳ Inexistente na conta | Só há dataset de WhatsApp. Instalar um pixel na landing page se quiser *Landing page views*, remarketing por visita e eventos de site. |
 | 5c | Criativos e landing prontos do cliente | ⚠️ Recebidos e **revisados** | 4 criativos distintos e o HTML da landing, em `materiais-finais/`. **Landing reprovada; criativos C e D sem aviso jurídico.** Ver `conformidade/revisao-materiais-2026-10-24.md`. 2ª remessa: landing **idêntica** (nada corrigido) e peças E/F novas, também sem aviso. Faltam 1:1 de A, B e C; 4:5 de A, C, D e E. |
 
+## Criação no Meta (2026-10-24)
+
+| # | Item | Estado |
+|---|---|---|
+| M1 | Campanha `LEADS \| Financiamento Veículos \| Análise Contratual \| BR` | ✅ **Criada, pausada, gasto zero.** ID `120248155947710591`. **É uma campanha real, não um rascunho** (o modo rascunho não está liberado nesta conta). Objetivo Leads; orçamento no nível dos conjuntos (R$ 30 + R$ 20); **nenhuma categoria especial declarada, o que não pode ser alterado depois**. Se a decisão mudar, criar nova campanha; esta está vazia |
+| M2 | Conjuntos de anúncios (Sudeste; Sul + Centro-Oeste) | 🚫 Não criados. Termos de lead ads não aceitos (API) e **a ferramenta não resolve as chaves de estado** da segmentação |
+| M3 | Formulário nativo | 🚫 Precisa ser criado no Gerenciador de Anúncios; informar o ID para vincular aos anúncios |
+| M4 | Envio das imagens ao Meta | 🚫 O ambiente só aceita URL pública ou o app interativo de upload; nenhum está disponível aqui |
+| M5 | Anúncios | 🚫 Dependem de M2, M3 e M4, e das correções das peças (`materiais-finais/correcoes-criativos.md`) |
+
 ## Antes de produzir/usar os criativos
 
 | # | Pendência |
