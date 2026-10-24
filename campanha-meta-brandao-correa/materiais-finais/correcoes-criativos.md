@@ -1,5 +1,7 @@
 # Correções dos criativos, peça por peça
 
+**Atualização:** as cinco peças foram refeitas e estão em `criativos-corrigidos/` (15 arquivos). Este documento continua valendo como registro do que foi corrigido.
+
 Para o designer. Base: `../conformidade/revisao-materiais-2026-10-24.md`. Os arquivos recebidos **não foram editados**: são imagens prontas e a correção exige refazer a arte.
 
 ## Aplicar em todas as peças

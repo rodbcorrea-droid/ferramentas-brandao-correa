@@ -29,6 +29,8 @@ Acesso autorizado pelo cliente. Foi feita **somente leitura**: nada foi criado, 
 | Públicos personalizados | Nenhum. Os públicos de remarketing precisam ser criados do zero. |
 | Campanhas existentes | 34, **todas pausadas e sem gasto nos últimos 30 dias** (inclui “[TESTE] [RASCUNHO] [NÃO PUBLICAR]” e várias cópias). A conta está sem histórico recente de entrega. |
 
+**Criativos refeitos:** 15 imagens prontas (5 peças × 3 tamanhos) em `materiais-finais/criativos-corrigidos/`, com a lista do que mudou. O cliente sobe pela biblioteca de mídia da conta.
+
 **Criação no Meta (2026-10-24):** foi criada **somente a campanha**, pausada e com gasto zero (ID `120248155947710591`; campanha real, não rascunho). Conjuntos e anúncios **não** foram criados; ver `pendencias-a-confirmar.md`, seção “Criação no Meta”.
 
 **Ainda não verificado:** as duas páginas (landing e política) não puderam ser abertas a partir do ambiente em que o pacote foi montado (domínio bloqueado pela rede). O domínio da landing, `acidentesinss`, difere do domínio `inssacidentes` usado em todos os documentos do repositório. **Confirmar que a URL está correta** (pode ser outro site ou erro de digitação).

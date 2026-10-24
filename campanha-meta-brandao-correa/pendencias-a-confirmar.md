@@ -22,9 +22,9 @@ Legenda: ✅ decidido/fornecido pelo cliente · ⏳ aberto · ⚠️ decidido, m
 | # | Item | Estado |
 |---|---|---|
 | M1 | Campanha `LEADS \| Financiamento Veículos \| Análise Contratual \| BR` | ✅ **Criada, pausada, gasto zero.** ID `120248155947710591`. **É uma campanha real, não um rascunho** (o modo rascunho não está liberado nesta conta). Objetivo Leads; orçamento no nível dos conjuntos (R$ 30 + R$ 20); **nenhuma categoria especial declarada, o que não pode ser alterado depois**. Se a decisão mudar, criar nova campanha; esta está vazia |
-| M2 | Conjuntos de anúncios (Sudeste; Sul + Centro-Oeste) | 🚫 Não criados. Termos de lead ads não aceitos (API) e **a ferramenta não resolve as chaves de estado** da segmentação |
-| M3 | Formulário nativo | 🚫 Precisa ser criado no Gerenciador de Anúncios; informar o ID para vincular aos anúncios |
-| M4 | Envio das imagens ao Meta | 🚫 O ambiente só aceita URL pública ou o app interativo de upload; nenhum está disponível aqui |
+| M2 | Conjuntos de anúncios (Sudeste; Sul + Centro-Oeste) | 🚫 **Tentativa de criação falhou** (2026-10-24). O erro informa que a Página não aceitou os termos **ou que a conexão não consegue ler o aceite**, e que isso exige a permissão `pages_manage_ads` para a Página e papel de administrador. O cliente mostrou o aceite na tela. **Ação:** reconectar o conector do Meta Ads concedendo `pages_manage_ads` à Página `2033836416865143`. Decisão do cliente: **opção A** (Brasil inteiro; restringir os estados no Gerenciador antes de ativar) |
+| M3 | Formulário nativo | ✅ Criado pelo cliente. ID `1969971681038634` |
+| M4 | Imagens | ⚠️ **Refeitas**: 15 arquivos em `materiais-finais/criativos-corrigidos/` (1080×1080, 1080×1350, 1080×1920). O cliente sobe pela biblioteca de mídia; o ambiente não envia arquivos |
 | M5 | Anúncios | 🚫 Dependem de M2, M3 e M4, e das correções das peças (`materiais-finais/correcoes-criativos.md`) |
 
 ## Antes de produzir/usar os criativos

@@ -26,7 +26,7 @@
       "criada_em": "2026-10-24",
       "categorias_especiais_declaradas": "nenhuma ([]); não pode ser alterado depois de criada",
       "orcamento": "ABO: sem orçamento na campanha; R$ 30 e R$ 20 por conjunto, quando os conjuntos forem criados",
-      "conjuntos_e_anuncios": "NÃO criados. Bloqueios: termos de lead ads, formulário nativo, chaves de região e envio das imagens"
+      "conjuntos_e_anuncios": "NÃO criados. Bloqueio atual: a conexão do Meta Ads não tem a permissão pages_manage_ads para a Página (a API devolve os termos de lead ads como não aceitos, embora o cliente tenha aceitado). Plano: dois conjuntos com Brasil inteiro (opção A), homens 22+, R$ 30 e R$ 20 por dia; o cliente restringe os estados no Gerenciador antes de ativar. Formulário: 1969971681038634. Imagens: materiais-finais/criativos-corrigidos/"
     },
     "pagina_facebook": {
       "id": "2033836416865143",

@@ -26,3 +26,4 @@ Os nomes originais dos arquivos não são conhecidos; os nomes acima descrevem o
 | `landing-revisao-veiculos_corrigida.html` | Proposta de landing corrigida (não publicada) |
 | `landing-alteracoes.md` | O que mudou, o que falta e como foi verificado |
 | `correcoes-criativos.md` | Correções peça por peça para o designer |
+| `criativos-corrigidos/` | **15 imagens refeitas** (5 peças × 1:1, 4:5, 9:16) + zip + LEIA-ME |
