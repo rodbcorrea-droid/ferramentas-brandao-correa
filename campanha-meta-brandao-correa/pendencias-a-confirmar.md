@@ -15,7 +15,7 @@ Legenda: ✅ decidido/fornecido pelo cliente · ⏳ aberto · ⚠️ decidido, m
 | 5 | Conta, Página e Instagram | ✅ Definidos | Conta `1155384176705579`; Página `2033836416865143`; Instagram `@brandaocorrea.adv` (`17841407573996167`). |
 | 5a | **Termos de lead ads da Página** | 🚫 **Não aceitos (segundo a API)** | Aceitar em https://www.facebook.com/legal/leadgen/tos. Sem isso o conjunto de anúncios de leads não é criado. Se já foi aceito por outro usuário, confirmar no Gerenciador de Anúncios. |
 | 5b | **Pixel no site** | ⏳ Inexistente na conta | Só há dataset de WhatsApp. Instalar um pixel na landing page se quiser *Landing page views*, remarketing por visita e eventos de site. |
-| 5c | Criativos e landing prontos do cliente | ⚠️ Recebidos e **revisados** | 4 criativos distintos e o HTML da landing, em `materiais-finais/`. **Landing reprovada; criativos C e D sem aviso jurídico.** Ver `conformidade/revisao-materiais-2026-10-24.md`. Ainda não recebidos: versões 1:1 e o criativo “escondidas”. |
+| 5c | Criativos e landing prontos do cliente | ⚠️ Recebidos e **revisados** | 4 criativos distintos e o HTML da landing, em `materiais-finais/`. **Landing reprovada; criativos C e D sem aviso jurídico.** Ver `conformidade/revisao-materiais-2026-10-24.md`. 2ª remessa: landing **idêntica** (nada corrigido) e peças E/F novas, também sem aviso. Faltam 1:1 de A, B e C; 4:5 de A, C, D e E. |
 
 ## Antes de produzir/usar os criativos
 

@@ -40,9 +40,9 @@ Foram recebidos 5 imagens (4 distintas) e o HTML da landing. Estão em `materiai
 | Landing page | **Reprovada**: 3 problemas bloqueantes (afirmação “você pode ter pago juros abusivos”, depoimentos com estrelas, quiz que dá o mesmo resultado positivo a todos) |
 | Criativo B (4:5) | Quase pronto |
 | Criativo A (9:16) | Aprovável após reposicionar logotipo e aviso |
-| Criativos C e D (9:16) | **Não publicar**: sem aviso jurídico |
+| Criativos C, D e E/F | **Não publicar**: sem aviso jurídico (E/F também tem pergunta direta sobre o contrato da pessoa) |
 
-**Não recebidos:** versões 1:1 e o criativo “escondidas”. Nada foi enviado ao Meta.
+**2ª remessa:** a landing foi reenviada com conteúdo **idêntico** (mesmo checksum): nenhum item foi corrigido. Chegaram também as peças E (1:1) e F (9:16). Nada foi enviado ao Meta.
 
 ---
 

@@ -9,7 +9,8 @@
 | Landing page (`landing-revisao-veiculos.html`) | **Reprovada.** 3 problemas bloqueantes que contradizem o briefing e os próprios anúncios. |
 | Criativo B (4:5, “Financiamento de carro ou moto”) | **Quase pronto.** Correções menores. |
 | Criativo A (9:16, “Juros acima da média…”) | **Aprovável após reposicionar elementos.** |
-| Criativos C e D (9:16, “O que observar…” e “Já quitou…”) | **Não publicar como estão.** Sem aviso jurídico. |
+| Criativos C e D (“O que observar…” e “Já quitou…”) | **Não publicar como estão.** Sem aviso jurídico. |
+| Criativo E/F (1:1 e 9:16, “Financiou carro ou moto? Você sabe se a taxa do seu contrato está acima da média?”) | **Não publicar como está.** Sem aviso jurídico, pergunta direta sobre o contrato da pessoa e barras que sugerem taxa acima da média. |
 
 O mais importante: **os criativos são mais cautelosos que a landing page.** O criativo A diz que juros acima da média **não** são sempre abusivos. A landing diz que a pessoa “pode ter pago juros abusivos sem saber” e que o entendimento dos tribunais é “pacificado”. Um anúncio sóbrio levando a uma página promocional é o cenário em que a página reprova e arrasta a conta.
 
@@ -17,13 +18,14 @@ O mais importante: **os criativos são mais cautelosos que a landing page.** O c
 
 | Recebido | Observação |
 |---|---|
-| 5 imagens | **4 distintas.** Duas são o mesmo arquivo (idêntico byte a byte). |
-| `landing-revisao-veiculos.html` | Lido por inteiro. **Assumo que é o conteúdo publicado em `https://acidentesinss.bitrix24.site/jurosfinan/`**; a URL ao vivo não pôde ser aberta pelo ambiente. |
+| 1ª remessa: 5 imagens | **4 distintas** (duas idênticas byte a byte) |
+| 2ª remessa: 5 imagens | **2 novas salvas** (E 1:1 e F 9:16). Um “Já quitou” 1:1 também chegou, mas só foi visto na conversa; **não foi salvo em disco**. O restante repete a 1ª remessa. |
+| `landing-revisao-veiculos.html` (2 envios) | Lido por inteiro. **Os dois envios têm o mesmo checksum (conteúdo idêntico): nenhum item foi corrigido entre eles.** **Assumo que é o conteúdo publicado em `https://acidentesinss.bitrix24.site/jurosfinan/`**; a URL ao vivo não pôde ser aberta pelo ambiente. |
 
 | Não recebido / não revisado | Por quê |
 |---|---|
-| Versões **1:1** de qualquer peça | Não chegaram. O pacote exige 1:1, 4:5 e 9:16. |
-| Criativo “**escondidas**” (`criativo3_escondidas`) | Nenhuma das cinco imagens traz esse texto, e não consigo ligar os nomes dos arquivos às imagens. **Continua não revisado.** |
+| Versões 1:1 de A, B e C; 4:5 de A, C, D e E; 9:16 de B | Não chegaram. O pacote exige 1:1, 4:5 e 9:16. |
+| Criativo “**escondidas**” (`criativo3_escondidas`) | Nenhuma imagem traz esse texto. **[Palpite]** o nome é um rótulo interno da peça C (“Seguro prestamista”, “Tarifas e encargos”); não consigo confirmar a ligação entre nomes de arquivo e imagens. |
 | Vídeo da landing (Vimeo `1224326477`) | O HTML só incorpora o player. |
 | Formulário da landing (Bitrix24, `inline/117/ih752e`) | Carregado de um script externo; não vi campos nem texto de consentimento. |
 
@@ -80,6 +82,32 @@ Gravidade: 🔴 bloqueante · 🟠 alto · 🟡 médio · ⚪ baixo. Linhas refe
 7. **Perguntas para o advogado:** L4, L8, L9 e a questão dos depoimentos (L2).
 8. Landing L10 a L13 e vídeo (L11).
 
-## 5. O que este relatório não faz
+## 5. Atualização — segunda remessa (2026-10-24)
+
+**Landing: idêntica à primeira.** Os dois HTML enviados têm o mesmo checksum. Se você editou a página, o arquivo enviado não é o editado. **Todos os achados L1 a L13 continuam valendo.**
+
+**Peças novas**
+
+| Peça | Arquivo | Formato | Achados | Gravidade |
+|---|---|---|---|---|
+| **E** “Financiou carro ou moto? Você sabe se a taxa do seu contrato está acima da média?” | `pe_financiou-taxa-vs-media_1x1` | 1:1, 1254×1254 | **Sem aviso jurídico.** Pergunta direta sobre o contrato da pessoa (“Você sabe… do **seu** contrato”), mesmo risco de atributos pessoais já apontado em P01/P11. Barras: a do contrato é cerca de **1,8 vez** a da média, o que sugere taxa acima da média; a ressalva “comparação ilustrativa” é minúscula. CTA “Conheça seus direitos”. | 🔴 |
+| **F** (mesma arte) | `pf_financiou-taxa-vs-media_9x16` | 9:16, 940×1672 | Os mesmos achados de E. Primeira linha do título dentro da faixa superior; logotipo dentro da inferior; botão rente ao limite. | 🔴 |
+| **D** “Já quitou o financiamento?” | só visto na conversa | 1:1 | Mesmos achados de D 9:16: **sem aviso**, pergunta sobre atributo pessoal, selo “QUITADO”, CTA “Conheça seus direitos”. Esta versão adiciona rótulo “CONTRATO DE FINANCIAMENTO” e uma assinatura desenhada. | 🔴 |
+
+**Ponto forte de E/F.** A frase “**Superar a média, isoladamente, não comprova abusividade**” é honesta e está alinhada com o criativo A. É também o oposto da landing (“entendimento pacificado”, “Você pode ter pago juros abusivos”). **[Provável]** é a posição mais próxima do entendimento do STJ. Use-a como base para reescrever a landing.
+
+**Logotipo.** Os emblemas continuam diferentes entre as peças (brasão heráldico em A, brasão prateado pequeno em B, escudo com balança em C a F). Confirme o oficial.
+
+**Estado dos formatos recebidos**
+
+| Peça | 1:1 | 4:5 | 9:16 |
+|---|---|---|---|
+| A “Juros acima da média…” | — | — | ✅ |
+| B “Financiamento de carro ou moto” | — | ✅ | — |
+| C “O que observar…” | — | — | ✅ |
+| D “Já quitou…” | ✅ (não salvo) | — | ✅ |
+| E/F “Financiou carro ou moto?” | ✅ | — | ✅ |
+
+## 6. O que este relatório não faz
 
 Não corrige os arquivos, não altera a landing publicada nem sobe nada ao Meta. As correções de texto acima são sugestões a serem aprovadas pelo advogado responsável.

@@ -30,9 +30,9 @@ Itens ✅ valem para o **texto do pacote**. Eles precisam ser revistos de novo s
 ## Criativos
 
 - [ ] ⏳ **PENDENTE** Criativos manuais inseridos. (4 criativos recebidos e revisados; nenhum enviado ao Meta; nenhum pronto para envio.)
-- [ ] ⚠️ **ATENÇÃO** Versões 9:16, 4:5 e 1:1 revisadas. Nenhuma versão 1:1 recebida; só o criativo B está em 4:5.
+- [ ] ⚠️ **ATENÇÃO** Versões 9:16, 4:5 e 1:1 revisadas. Faltam 1:1 de A, B e C e 4:5 de A, C, D e E (2ª remessa: E tem 1:1 e 9:16; D tem 1:1 e 9:16).
 - [ ] ⏳ **PENDENTE** Legendas revisadas.
-- [ ] ⚠️ **ATENÇÃO** Aviso jurídico revisado. Criativos C e D **não têm aviso**; no A o aviso está na faixa inferior coberta pela interface.
+- [ ] ⚠️ **ATENÇÃO** Aviso jurídico revisado. Criativos C, D e E/F **não têm aviso**; no A o aviso está na faixa inferior coberta pela interface.
 
 ## Conformidade do conteúdo
 
