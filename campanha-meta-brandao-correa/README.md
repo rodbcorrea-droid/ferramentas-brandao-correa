@@ -29,6 +29,8 @@ Acesso autorizado pelo cliente. Foi feita **somente leitura**: nada foi criado, 
 | Públicos personalizados | Nenhum. Os públicos de remarketing precisam ser criados do zero. |
 | Campanhas existentes | 34, **todas pausadas e sem gasto nos últimos 30 dias** (inclui “[TESTE] [RASCUNHO] [NÃO PUBLICAR]” e várias cópias). A conta está sem histórico recente de entrega. |
 
+**Pesquisa de público:** `pesquisa-publico.md` (recomendação, evidências, lacunas e fontes).
+
 **Retomada:** `PROXIMOS-PASSOS.md` traz o que falta para criar conjuntos e anúncios, com todos os IDs e o texto para colar numa sessão nova.
 
 **Criativos refeitos:** 15 imagens prontas (5 peças × 3 tamanhos) em `materiais-finais/criativos-corrigidos/`, com a lista do que mudou. O cliente sobe pela biblioteca de mídia da conta.
