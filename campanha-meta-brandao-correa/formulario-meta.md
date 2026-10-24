@@ -39,7 +39,7 @@ Não exigir verificação por SMS se o campo de telefone não estiver obrigatór
 
 > Usaremos seus dados para analisar as informações do financiamento e entrar em contato sobre a solicitação. Consulte a política de privacidade da Brandão Correa Assessoria Jurídica.
 
-- Link da política de privacidade: **a confirmar** (a Meta exige uma URL válida no formulário).
+- Link da política de privacidade: `https://brandaocorrea.bitrix24.site/politica/` (informado em 2026-10-24; a Meta exige uma URL válida no formulário). **Conferir que a página abre e cobre esta finalidade**; não foi possível abri-la a partir do ambiente do pacote.
 - Base legal e finalidade (LGPD): **a confirmar** com o responsável pela proteção de dados do escritório.
 
 ## 5. Tela de conclusão
@@ -49,7 +49,7 @@ Não exigir verificação por SMS se o campo de telefone não estiver obrigatór
 | Título | Recebemos suas informações |
 | Descrição | A equipe da Brandão Correa Assessoria Jurídica fará uma análise inicial das informações e poderá entrar em contato pelo telefone informado. O preenchimento não garante resultado ou contratação. |
 | CTA | Saiba mais |
-| Link | https://brandaocorrea.bitrix24.site/2684/ |
+| Link | https://acidentesinss.bitrix24.site/jurosfinan/ |
 
 ## 6. O que não fazer
 

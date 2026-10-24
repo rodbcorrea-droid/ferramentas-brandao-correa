@@ -1,6 +1,13 @@
 {
   "_aviso": "MODELO DE DOCUMENTAÇÃO. Não enviar à API da Meta. Não contém IDs, tokens ou credenciais. Nada foi publicado.",
   "_pendencias": "Todo valor marcado como 'a confirmar' depende de validação do cliente ou da política vigente da Meta.",
+  "decisoes_do_cliente_2026_10_24": [
+    "Prosseguir com homens, 22+, mesmo havendo risco de restrição da Meta.",
+    "Regras de publicidade da OAB: revisadas pelo cliente.",
+    "Landing page: https://acidentesinss.bitrix24.site/jurosfinan/",
+    "Política de privacidade: https://brandaocorrea.bitrix24.site/politica/",
+    "Conta de anúncios: 1155384176705579"
+  ],
   "campanha": {
     "nome": "LEADS | Financiamento Veículos | Análise Contratual | BR",
     "marca": "Brandão Correa Assessoria Jurídica",
@@ -9,8 +16,12 @@
     "orcamento_diario_total_brl": 50,
     "tipo_orcamento": "CBO sugerido (a confirmar); alternativa: ABO 30/20",
     "status_alvo": "RASCUNHO / PAUSADA até autorização manual final",
-    "categoria_especial_de_anuncio": "a confirmar antes de criar (ver conformidade/checklist-meta.md)",
-    "landing_page": "https://brandaocorrea.bitrix24.site/2684/"
+    "categoria_especial_de_anuncio": "Decisão do cliente (2026-10-24): prosseguir com o público solicitado. Se a Meta restringir gênero/idade na configuração, usar o que for permitido e registrar; não contornar.",
+    "conta_de_anuncios_id": "1155384176705579",
+    "conta_de_anuncios_nome": "SALÁRIO MATERNIDADE - DR.RODRIGO BRANDÃO (conforme listagem anterior da sessão; moeda BRL)",
+    "pagina_facebook_e_instagram": "a confirmar",
+    "politica_de_privacidade": "https://brandaocorrea.bitrix24.site/politica/",
+    "landing_page": "https://acidentesinss.bitrix24.site/jurosfinan/"
   },
   "conjuntos": [
     {

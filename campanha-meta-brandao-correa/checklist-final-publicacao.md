@@ -8,12 +8,12 @@ Itens ✅ valem para o **texto do pacote**. Eles precisam ser revistos de novo s
 
 ## Configuração
 
-- [ ] ⏳ **PENDENTE** Página correta selecionada. (Conta, Página e Instagram a confirmar.)
+- [ ] ⏳ **PENDENTE** Página correta selecionada. (Conta definida: `1155384176705579`. Página e Instagram a confirmar.)
 - [ ] ⏳ **PENDENTE** Campanha com objetivo Leads. (Documentada em `dados/estrutura-campanha.json`; não criada.)
 - [ ] ⏳ **PENDENTE** Orçamento revisado. (R$ 50/dia; divisão e tipo CBO/ABO a confirmar.)
 - [ ] ⏳ **PENDENTE** Regiões revisadas.
-- [ ] ⏳ **PENDENTE** Idade revisada. ⚠️ Depende da decisão sobre categoria especial de anúncio.
-- [ ] ⏳ **PENDENTE** Gênero revisado. ⚠️ Idem.
+- [ ] ⏳ **PENDENTE** Idade revisada. ⚠️ Cliente decidiu prosseguir com 22+; conferir o que a Meta permite na configuração.
+- [ ] ⏳ **PENDENTE** Gênero revisado. ⚠️ Cliente decidiu prosseguir com homens; conferir o que a Meta permite na configuração.
 
 ## Formulário
 
@@ -22,8 +22,8 @@ Itens ✅ valem para o **texto do pacote**. Eles precisam ser revistos de novo s
 - [ ] ⏳ **PENDENTE** Pergunta sobre banco revisada. ⚠️ Com duas opções fixas, o nome do banco não é capturado (`formulario-meta.md`).
 - [ ] ⏳ **PENDENTE** Pergunta sobre quitação revisada.
 - [ ] ⏳ **PENDENTE** Pergunta sobre parcelas revisada.
-- [ ] ⏳ **PENDENTE** Política de privacidade preenchida. (URL a confirmar.)
-- [ ] ⏳ **PENDENTE** Landing page testada. (`https://brandaocorrea.bitrix24.site/2684/` não foi verificada.)
+- [ ] ⏳ **PENDENTE** Política de privacidade preenchida. (URL informada: `https://brandaocorrea.bitrix24.site/politica/`; falta inserir no formulário e conferir que abre.)
+- [ ] ⏳ **PENDENTE** Landing page testada. (`https://acidentesinss.bitrix24.site/jurosfinan/` não foi verificada; confirmar o domínio, que difere do `inssacidentes` usado no repositório.)
 - [ ] ⏳ **PENDENTE** Formulário testado em modo de prévia.
 - [ ] ⏳ **PENDENTE** Leads serão recebidos corretamente. (Integração com o Bitrix24 a definir.)
 

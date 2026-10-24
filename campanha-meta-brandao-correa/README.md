@@ -4,7 +4,19 @@
 **Gerado em:** 2026-10-24
 **Status:** pacote de documentação. **Nada foi publicado, ativado, pago, enviado ou criado em conta alguma.** Nenhuma imagem ou vídeo foi gerado. Nenhuma credencial foi usada.
 
-> A campanha deve permanecer em **rascunho/pausada** até a autorização final e manual. Antes disso, resolva as pendências de `pendencias-a-confirmar.md`. Duas delas (categoria especial de anúncio e regras de publicidade da OAB) podem alterar a configuração de público e o texto dos anúncios.
+> A campanha deve permanecer em **rascunho/pausada** até a autorização final e manual. Antes disso, resolva as pendências de `pendencias-a-confirmar.md`.
+
+## Decisões do cliente (2026-10-24)
+
+| Tema | Decisão |
+|---|---|
+| Público | Prosseguir com **homens, 22+**, mesmo havendo risco de a Meta restringir gênero e idade. Se a restrição aparecer na configuração, usar o que a Meta permitir e registrar. **Não contornar.** |
+| Regras da OAB | Revisadas pelo cliente. Este pacote não verificou essa revisão. |
+| Landing page | `https://acidentesinss.bitrix24.site/jurosfinan/` (substitui a `.../2684/` do briefing original) |
+| Política de privacidade | `https://brandaocorrea.bitrix24.site/politica/` |
+| Conta de anúncios | `1155384176705579` (nome na listagem anterior: “SALÁRIO MATERNIDADE - DR.RODRIGO BRANDÃO”, moeda BRL) |
+
+**Ainda não verificado:** as duas páginas (landing e política) não puderam ser abertas a partir do ambiente em que o pacote foi montado (domínio bloqueado pela rede). O domínio da landing, `acidentesinss`, difere do domínio `inssacidentes` usado em todos os documentos do repositório. **Confirmar que a URL está correta** (pode ser outro site ou erro de digitação).
 
 ---
 
@@ -16,7 +28,7 @@ Gerar leads qualificados por **formulário nativo** do Meta Ads, com triagem ini
 
 Configuração inicial solicitada: **homens, a partir de 22 anos (22 a 65+)**, que moram nas regiões escolhidas. Contratos em andamento e quitados. Detalhes, sugestões de interesses e testes em `estrategia-publicos.md`.
 
-Observação: a configuração por gênero e idade pode **não estar disponível** se a Meta exigir categoria especial de anúncio para esta campanha. Ver `conformidade/checklist-meta.md`.
+Observação: a configuração por gênero e idade pode **não estar disponível** se a Meta exigir categoria especial de anúncio para esta campanha. O cliente decidiu prosseguir mesmo assim; ver `conformidade/checklist-meta.md`.
 
 ## 3. Regiões
 
@@ -41,7 +53,7 @@ Campanha `LEADS | Financiamento Veículos | Análise Contratual | BR` → 4 conj
 
 ## 7. Landing page
 
-`https://brandaocorrea.bitrix24.site/2684/` — usada na tela final do formulário e como destino complementar. **Não foi possível verificar o conteúdo desta página.** Revise-a com `conformidade/checklist-publicidade-juridica.md` antes de usá-la. Páginas anteriores do cliente (pasta `docs/`) usam linguagem que contraria este briefing (promessa de valor, urgência, depoimentos).
+`https://acidentesinss.bitrix24.site/jurosfinan/` — usada na tela final do formulário e como destino complementar. **Não foi possível verificar o conteúdo desta página** (domínio bloqueado pela rede do ambiente). Revise-a com `conformidade/checklist-publicidade-juridica.md` antes de usá-la. Páginas anteriores do cliente (pasta `docs/`) usam linguagem que contraria este briefing (promessa de valor, urgência, depoimentos).
 
 ## 8. Criativos necessários (todos a produzir manualmente)
 
@@ -60,7 +72,7 @@ Total: 29 criativos planejados (lista completa em `dados/nomes-criativos.csv`). 
 
 Os passos abaixo descrevem o fluxo no Gerenciador de Anúncios. Nomes de menus podem mudar (a confirmar).
 
-1. Entre no Gerenciador de Anúncios, na conta de anúncios e na Página autorizadas (**a confirmar qual**).
+1. Entre no Gerenciador de Anúncios, na conta de anúncios `1155384176705579`. A **Página do Facebook e o perfil do Instagram** a vincular ainda estão **a confirmar**.
 2. Crie a campanha com objetivo **Leads** e local de conversão **Formulários instantâneos**. Use o nome e o orçamento de `dados/estrutura-campanha.json`.
 3. Antes de continuar, defina a **categoria especial de anúncio** (ver `conformidade/checklist-meta.md`).
 4. Crie o conjunto 1 (Sudeste): localização "pessoas que moram nesta localização", idade, gênero, público (A ou B) e posicionamentos Advantage+.

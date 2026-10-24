@@ -19,7 +19,7 @@ Os nomes seguem `nomes-padroes.md`. Eles contêm espaços, acentos e barras; os 
 ### Exemplo de URL final
 
 ```
-https://brandaocorrea.bitrix24.site/2684/?utm_source=meta&utm_medium=paid_social&utm_campaign=leads_financiamento_veiculos&utm_content={{ad.name}}&utm_term={{adset.name}}
+https://acidentesinss.bitrix24.site/jurosfinan/?utm_source=meta&utm_medium=paid_social&utm_campaign=leads_financiamento_veiculos&utm_content={{ad.name}}&utm_term={{adset.name}}
 ```
 
 Para identificar a campanha, o conjunto e o anúncio pelos IDs também, considerar adicionar `{{campaign.id}}`, `{{adset.id}}`, `{{ad.id}}` como parâmetros extras (a confirmar).

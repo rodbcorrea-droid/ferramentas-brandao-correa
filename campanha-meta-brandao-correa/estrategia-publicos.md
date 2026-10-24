@@ -2,9 +2,9 @@
 
 ## 1. Alerta antes de configurar
 
-**[Provável] Possível categoria especial de anúncio.** Se a Meta classificar a campanha como “produtos e serviços financeiros”, a segmentação por **gênero e idade** e algumas opções de localização e de detalhamento ficam restritas ou indisponíveis. Isso inviabilizaria a configuração “homens, 22+”. A decisão é do anunciante, com base na política vigente (**a confirmar**). Ver `conformidade/checklist-meta.md`.
+**[Provável] Possível categoria especial de anúncio.** Se a Meta classificar a campanha como “produtos e serviços financeiros”, a segmentação por **gênero e idade** e algumas opções de localização e de detalhamento ficam restritas ou indisponíveis. Isso inviabilizaria a configuração “homens, 22+”.
 
-Se a categoria especial for exigida, usar o público que a Meta permitir e registrar a diferença neste arquivo. Não contornar a restrição.
+**Decisão do cliente (2026-10-24): prosseguir com “homens, 22+”.** Na prática: montar o conjunto como especificado abaixo. Se, na hora de configurar, a Meta exigir a categoria ou bloquear gênero e idade, usar o público que a Meta permitir, **registrar a diferença neste arquivo** e avisar o cliente. Não contornar a restrição (por exemplo, não declarar uma categoria diferente da aplicável).
 
 ## 2. Público inicial solicitado
 

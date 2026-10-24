@@ -2,15 +2,17 @@
 
 Tudo o que não foi fornecido ou que depende de política vigente está listado aqui. Nada foi inventado.
 
-## Bloqueantes (resolver antes de montar a campanha)
+Legenda: ✅ decidido/fornecido pelo cliente · ⏳ aberto · ⚠️ decidido, mas com conferência necessária.
 
-| # | Pendência | Por que bloqueia | Responsável |
+## Bloqueantes (atualizado em 2026-10-24)
+
+| # | Pendência | Estado | Nota |
 |---|---|---|---|
-| 1 | Categoria especial de anúncio (produtos e serviços financeiros) | Pode inviabilizar a segmentação por gênero e idade | Cliente / Meta |
-| 2 | Regras de publicidade da OAB aplicáveis (Provimento 205/2021 e alterações) | Podem exigir mudança de texto, de CTA e de identificação | Advogado responsável |
-| 3 | Revisão da landing page `https://brandaocorrea.bitrix24.site/2684/` | Não foi possível verificar o conteúdo | Cliente |
-| 4 | URL da política de privacidade | Exigida no formulário | Cliente |
-| 5 | Conta de anúncios, Página e perfil do Instagram a utilizar | Não definidos neste pacote | Cliente |
+| 1 | Categoria especial de anúncio e público “homens, 22+” | ✅ Decidido | Cliente decidiu prosseguir. Se a Meta bloquear gênero ou idade na configuração, usar o permitido, registrar e avisar. Não contornar. |
+| 2 | Regras de publicidade da OAB | ✅ Revisado pelo cliente | Este pacote não verificou a revisão. |
+| 3 | Revisão da landing page | ⚠️ URL informada, conteúdo **não verificado** | `https://acidentesinss.bitrix24.site/jurosfinan/`. O ambiente do pacote não consegue abrir `bitrix24.site` (bloqueio de rede). **O domínio `acidentesinss` difere do `inssacidentes` usado em todos os documentos do repositório: confirmar que a URL está correta.** Revisar o conteúdo com `conformidade/checklist-publicidade-juridica.md`. |
+| 4 | URL da política de privacidade | ⚠️ URL informada, conteúdo **não verificado** | `https://brandaocorrea.bitrix24.site/politica/`. Conferir que abre e cobre esta finalidade (análise de financiamento e contato). |
+| 5 | Conta de anúncios, Página e Instagram | ⚠️ Conta definida; Página/Instagram abertos | Conta `1155384176705579`. Conferir que está ativa, com pagamento e sem restrição. Página do Facebook e perfil do Instagram a vincular: **a confirmar**. |
 
 ## Antes de produzir os criativos
 
@@ -19,7 +21,7 @@ Tudo o que não foi fornecido ou que depende de política vigente está listado 
 | 6 | Logotipo oficial (arquivo) |
 | 7 | Manual de marca (cores e fontes oficiais) |
 | 8 | Apresentador(a) e autorização de imagem e voz |
-| 9 | Identificação profissional a exibir nas artes (OAB/nome da sociedade) |
+| 9 | Identificação profissional a exibir nas artes (OAB/nome da sociedade), se exigida pela revisão já feita |
 | 10 | Trilha sonora licenciada |
 | 11 | Escolha dos criativos da fase 1 |
 

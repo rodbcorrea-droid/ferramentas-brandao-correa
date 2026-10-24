@@ -7,7 +7,9 @@
 | Marca | Brandão Correa Assessoria Jurídica |
 | Tema | Análise de contratos de financiamento de carros e motos |
 | Objetivo | Leads qualificados por formulário nativo do Meta Ads |
-| Landing page | https://brandaocorrea.bitrix24.site/2684/ |
+| Landing page | https://acidentesinss.bitrix24.site/jurosfinan/ (definida em 2026-10-24; substitui a `.../2684/`) |
+| Política de privacidade | https://brandaocorrea.bitrix24.site/politica/ |
+| Conta de anúncios | 1155384176705579 (Página e Instagram a confirmar) |
 | Orçamento | R$ 50,00 por dia |
 | Status | Rascunho/pausada até autorização final |
 
@@ -69,13 +71,13 @@ Observação: nos conceitos 1 e 4, os ganchos do briefing contêm “seu financi
 
 ## 6. Pontos de atenção (leia antes de produzir)
 
-**[Provável] A Meta pode classificar esta campanha como categoria especial de anúncio (produtos e serviços financeiros).** Se isso ocorrer, segmentação por gênero e idade (22+, homens) e parte das opções de público ficam restritas. Decidir antes de montar os conjuntos. Ver `conformidade/checklist-meta.md`.
+**[Provável] A Meta pode classificar esta campanha como categoria especial de anúncio (produtos e serviços financeiros).** Se isso ocorrer, segmentação por gênero e idade (22+, homens) e parte das opções de público ficam restritas. **Decisão do cliente (2026-10-24): prosseguir com o público solicitado.** Na configuração, se a Meta bloquear gênero ou idade, usar o que for permitido e registrar a diferença. Não contornar a restrição. Ver `conformidade/checklist-meta.md`.
 
-**[Provável] A publicidade de advocacia no Brasil tem regras próprias da OAB** (Provimento 205/2021 e atualizações). O pacote foi escrito de forma sóbria e informativa, mas a conformidade final precisa de revisão do responsável técnico do escritório. Ver `conformidade/checklist-publicidade-juridica.md`.
+**[Provável] A publicidade de advocacia no Brasil tem regras próprias da OAB** (Provimento 205/2021 e atualizações). **O cliente informou, em 2026-10-24, que a revisão está feita.** Este pacote não verificou essa revisão; os textos foram escritos de forma sóbria e informativa. Ver `conformidade/checklist-publicidade-juridica.md`.
 
 **[Certo, com base nos documentos do repositório] A comunicação pública atual do cliente posiciona o escritório como “especialista em benefícios do INSS”** (`docs/site-principal-brandao-correa.md`). Direito bancário/consumidor é uma área nova nessa comunicação. Antes de publicar, confirmar: a equipe e o processo de atendimento para esta área; como os leads serão separados no Bitrix24; se a landing page deixa claro o escopo.
 
-**[Certo] As páginas anteriores do cliente usam linguagem que este briefing proíbe** (por exemplo, valor prometido em título, urgência, vagas limitadas, depoimentos). A landing page `.../2684/` não pôde ser verificada. Se ela repetir esse padrão, ela é o elo mais fraco da campanha: o anúncio pode ser aprovado e a página, reprovada.
+**[Certo] As páginas anteriores do cliente usam linguagem que este briefing proíbe** (por exemplo, valor prometido em título, urgência, vagas limitadas, depoimentos). A landing page `https://acidentesinss.bitrix24.site/jurosfinan/` não pôde ser verificada (domínio bloqueado pela rede do ambiente). Se ela repetir esse padrão, ela é o elo mais fraco da campanha: o anúncio pode ser aprovado e a página, reprovada. Além disso, **o domínio `acidentesinss` difere do `inssacidentes` usado em todos os documentos do repositório**; confirmar que a URL está correta.
 
 **[Certo] O orçamento limita a estrutura.** Quatro conjuntos regionais com R$ 50/dia no total ficam fragmentados. A recomendação da fase 1 é começar com dois conjuntos.
 
@@ -85,4 +87,4 @@ Definidos pelo cliente antes do lançamento (a confirmar): custo máximo aceitá
 
 ## 8. Informações não fornecidas (a confirmar)
 
-Número da OAB, endereço, telefone, logotipo oficial, manual de marca, apresentador(a), política de privacidade, conta de anúncios e Página a utilizar. Nenhuma delas foi inventada. Ver `pendencias-a-confirmar.md`.
+Número da OAB, endereço, telefone, logotipo oficial, manual de marca, apresentador(a) e Página/Instagram a vincular à conta. Nenhuma delas foi inventada. Ver `pendencias-a-confirmar.md`.

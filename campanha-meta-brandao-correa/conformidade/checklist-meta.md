@@ -19,7 +19,8 @@ Este checklist não substitui a leitura das políticas vigentes da Meta. Itens m
 | Declarar a categoria | Gênero e idade podem ficar indisponíveis. O público “homens, 22+” não poderá ser usado como pedido. Ajustar `estrategia-publicos.md`. |
 | Não declarar | Risco de reprovação ou restrição da conta se a Meta entender que a categoria se aplicava. |
 
-- [ ] Decisão registrada: __________ (data: ______)
+- [x] Decisão registrada: o cliente decidiu **prosseguir com o público solicitado** (2026-10-24).
+- [ ] Na configuração real: registrar aqui o que a Meta efetivamente permitiu (gênero, idade, categoria declarada) e a data. Se a Meta bloquear, usar o permitido e avisar o cliente. Não contornar.
 
 ## 2. Atributos pessoais e situação financeira
 
@@ -40,7 +41,7 @@ Este checklist não substitui a leitura das políticas vigentes da Meta. Itens m
 
 ## 4. Formulário de leads
 
-- [ ] URL válida da política de privacidade **(a confirmar)**.
+- [ ] URL da política de privacidade informada: `https://brandaocorrea.bitrix24.site/politica/`. **Conferir que abre** e cobre a finalidade. Não foi possível abri-la a partir do ambiente do pacote.
 - [ ] Mensagem de uso dos dados exibida.
 - [ ] Sem solicitação de CPF, RG, número do contrato, dados bancários ou documentos.
 - [ ] Sem códigos promocionais.
@@ -66,7 +67,7 @@ Este checklist não substitui a leitura das políticas vigentes da Meta. Itens m
 
 ## 7. Conta e Página
 
-- [ ] Conta de anúncios correta **(a confirmar)**.
+- [x] Conta de anúncios definida pelo cliente: `1155384176705579`. Conferir, antes de criar, que está ativa, com forma de pagamento e sem restrição.
 - [ ] Página do Facebook e perfil do Instagram vinculados **(a confirmar)**.
 - [ ] Forma de pagamento ativa.
 - [ ] Sem restrição ou desativação pendente na conta. Observação: o histórico da conta do cliente indicou contas desativadas por “atividade incomum” em outro contexto. Confirmar que a conta escolhida está regular antes de investir produção.

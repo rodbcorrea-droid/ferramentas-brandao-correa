@@ -1,5 +1,7 @@
 # Checklist de publicidade jurídica
 
+**Status (2026-10-24):** o cliente informou que a revisão das regras de publicidade da OAB para este tipo de anúncio **está concluída**. Este pacote não verificou essa revisão. Os itens abaixo servem de conferência final sobre as peças prontas e a landing page.
+
 **Este checklist não é parecer jurídico.** A conformidade com as regras de publicidade da advocacia deve ser confirmada pelo advogado responsável do escritório e, se necessário, pela Comissão competente da OAB.
 
 ## 1. Fontes que devem ser consultadas (a confirmar a versão vigente)

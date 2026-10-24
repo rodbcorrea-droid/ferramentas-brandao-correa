@@ -55,12 +55,12 @@
     }
   ],
   "mensagem_uso_dos_dados": "Usaremos seus dados para analisar as informações do financiamento e entrar em contato sobre a solicitação. Consulte a política de privacidade da Brandão Correa Assessoria Jurídica.",
-  "politica_de_privacidade_url": "a confirmar",
+  "politica_de_privacidade_url": "https://brandaocorrea.bitrix24.site/politica/",
   "tela_de_conclusao": {
     "titulo": "Recebemos suas informações",
     "descricao": "A equipe da Brandão Correa Assessoria Jurídica fará uma análise inicial das informações e poderá entrar em contato pelo telefone informado. O preenchimento não garante resultado ou contratação.",
     "cta": "Saiba mais",
-    "link": "https://brandaocorrea.bitrix24.site/2684/"
+    "link": "https://acidentesinss.bitrix24.site/jurosfinan/"
   },
   "nao_solicitar": [
     "CPF",
