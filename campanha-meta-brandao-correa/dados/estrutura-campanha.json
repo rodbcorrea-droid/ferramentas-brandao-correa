@@ -19,6 +19,15 @@
     "categoria_especial_de_anuncio": "Decisão do cliente (2026-10-24): prosseguir com o público solicitado. Se a Meta restringir gênero/idade na configuração, usar o que for permitido e registrar; não contornar.",
     "conta_de_anuncios_id": "1155384176705579",
     "conta_de_anuncios_nome": "SALÁRIO MATERNIDADE - DR.RODRIGO BRANDÃO (conforme listagem anterior da sessão; moeda BRL)",
+    "campanha_criada_no_meta": {
+      "id": "120248155947710591",
+      "status": "PAUSED (campanha real, não rascunho)",
+      "gasto": "0",
+      "criada_em": "2026-10-24",
+      "categorias_especiais_declaradas": "nenhuma ([]); não pode ser alterado depois de criada",
+      "orcamento": "ABO: sem orçamento na campanha; R$ 30 e R$ 20 por conjunto, quando os conjuntos forem criados",
+      "conjuntos_e_anuncios": "NÃO criados. Bloqueios: termos de lead ads, formulário nativo, chaves de região e envio das imagens"
+    },
     "pagina_facebook": {
       "id": "2033836416865143",
       "nome": "Brandão Correa Assessoria Jurídica",
